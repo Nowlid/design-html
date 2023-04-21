@@ -1,0 +1,51 @@
+body main > section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 11px;
+}
+body main > section h2.section-title {
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 2.4rem;
+  margin: 0.5em 0;
+}
+body main > section:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--white);
+  width: calc(100% - 2em);
+  height: 3px;
+  left: 1em;
+  bottom: 0;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+body main section#introduction > div {
+  height: 100%;
+  margin: 0;
+}
+body main section#introduction .title {
+  text-align: center;
+  font-size: 2rem;
+  width: 60vw;
+}
+body main section#introduction .title span {
+  font-size: 120%;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+body main section#introduction .image {
+  width: 40vw;
+  position: relative;
+  left: -2em;
+}
+body main section#introduction .image img {
+  transform: scale(97.5%);
+}/*# sourceMappingURL=home.css.map */
