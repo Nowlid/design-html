@@ -12,25 +12,4 @@ window.addEventListener('load', () => {
         e.setAttribute('data-aos', 'fade-up');
         e.setAttribute('data-aos-duration', '700');
     });
-
-    // Menu button
-    const navBtn = document.querySelector('header button.dropdown');
-
-    navBtn.addEventListener('click', e => {
-        navBtn.classList.toggle('active');
-        document.querySelector('header nav').classList.toggle('active');
-        navBtn.blur();
-    });
-
-    setTimeout(() => window.scroll({ top: document.body.clientHeight }));
-
-    // flexcards.js instance (abilities)
-    const flexcards = new FlexCards('section#abilities #mobile.container');
-
-    flexcards.carousel({ theme: "fff", indexType: "dots" });
-    flexcards.components.container
-        .querySelectorAll('.flexcards__arrow')
-        .forEach(e => e.style.display = "none");
-
-    // 
 });
