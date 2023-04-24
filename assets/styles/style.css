@@ -162,9 +162,9 @@ body header nav, body header .auth {
 }
 body header nav .nav-link, body header nav > a, body header .auth .nav-link, body header .auth > a {
   text-decoration: none;
-  background: rgba(134, 190, 218, 0.3333333333);
+  background: var(--primary-color);
   padding: 5px 10px;
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--white);
   border-radius: 16px;
   gap: 5px;
   height: 30px;
@@ -178,9 +178,9 @@ body header nav .nav-link img, body header nav > a img, body header .auth .nav-l
   -o-object-fit: contain;
      object-fit: contain;
   pointer-events: none;
-  filter: invert(100%) sepia(10%) saturate(0) hue-rotate(254deg) brightness(104%) contrast(102%);
 }
 body header nav .nav-link span, body header nav > a span, body header .auth .nav-link span, body header .auth > a span {
+  color: var(--black);
   pointer-events: none;
 }
 body header nav .nav-link:hover, body header nav .nav-link:focus, body header nav > a:hover, body header nav > a:focus, body header .auth .nav-link:hover, body header .auth .nav-link:focus, body header .auth > a:hover, body header .auth > a:focus {

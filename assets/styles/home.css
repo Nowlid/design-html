@@ -155,7 +155,6 @@ body main section#abilities .container#mobile .card::before {
     max-width: 100%;
     -webkit-clip-path: none !important;
             clip-path: none !important;
-    border-radius: 0 !important;
   }
   body main section#abilities .container .card .illustration {
     display: none;
