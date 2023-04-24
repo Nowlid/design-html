@@ -2,11 +2,7 @@ window.addEventListener('load', () => {
     // AOS on home and projects pages
     if (/home|projects/gi.test(document.body.id)) {
         // Loading animation
-        setTimeout(() => {
-            AOS.init();
-            document.body.classList.add('loaded');
-            setTimeout(() => document.querySelector('.loader-container').remove(), 1e3);
-        }, 500);
+        setTimeout(() => AOS.init(), 500);
 
         document.querySelectorAll('main > section').forEach(e => {
             e.setAttribute('data-aos', 'fade-up');
@@ -109,6 +105,7 @@ window.addEventListener('load', () => {
 
         // First text
         new TypeIt("section > form > p:first-child", {
+            startDelay: 2e3,
             speed: 40, afterComplete: a => {
                 a.destroy();
                 new TypeIt("section > form .input-box#email label", {
@@ -139,4 +136,10 @@ window.addEventListener('load', () => {
         document.querySelector('header nav').classList.toggle('active');
         navBtn.blur();
     });
+
+    // Loading animation
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+        setTimeout(() => document.querySelector('.loader-container').remove(), 1e3);
+    }, 500);
 });
