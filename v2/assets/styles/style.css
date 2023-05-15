@@ -1,0 +1,155 @@
+:root {
+  --primary-color: #0f52ba;
+  --secondary-color: #50c878;
+  --background-color: #e2f6f6;
+  --blue-2: #3974cf;
+  --white: #fff;
+  --black: #000;
+  --primary-filter: invert(21%) sepia(45%) saturate(4008%) hue-rotate(209deg) brightness(95%) contrast(94%);
+}
+
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Inter";
+}
+
+html {
+  box-sizing: border-box;
+  overflow: hidden auto;
+}
+
+a, button, input, textarea, fieldset {
+  outline: none;
+}
+
+a, button, input[type=radio], input[type=checkbox] {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background: var(--background-color);
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 6px;
+  border: 2px solid var(--background-color);
+}
+
+svg:not(:root) {
+  display: block;
+}
+
+::-moz-selection {
+  color: var(--white);
+  background: #444;
+}
+
+::selection {
+  color: var(--white);
+  background: #444;
+}
+
+::-moz-placeholder {
+  cursor: default;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+h1, h2, h3, h4, h5, p, a, span, button, ::placeholder {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@keyframes turn-animation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+img ~ span {
+  display: none;
+}
+img.failed {
+  display: none;
+}
+img.failed ~ span {
+  display: inline-block;
+}
+
+body {
+  background: var(--background-color);
+  position: relative;
+  overflow: hidden;
+}
+body .loader-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10000000000;
+  top: 0;
+  left: 0;
+}
+body .loader-container .page-loader {
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+  opacity: 1;
+  pointer-events: none;
+  transition: all 1s ease-in-out;
+  z-index: 10000000000;
+}
+body .loader-container .page-loader img {
+  position: relative;
+  width: 5em;
+  filter: var(--primary-filter);
+}
+body .loader-container .page-loader img:first-child {
+  top: 2.5em;
+  animation: turn-animation 0.8s linear infinite;
+}
+body .loader-container .page-loader img:last-child {
+  top: -2.5em;
+  animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 0.1s infinite;
+}
+body main {
+  z-index: 1;
+}
+body.loaded {
+  overflow: initial;
+}
+body.loaded .loader-container {
+  z-index: -1;
+}
+body.loaded .loader-container .page-loader {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */

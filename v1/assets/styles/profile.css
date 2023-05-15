@@ -1,0 +1,36 @@
+body main {
+  height: calc(100vh - 200px);
+}
+body main .container {
+  height: 100%;
+  width: calc(100% - 4em);
+  padding: 0 2em;
+}
+body main .container .menu {
+  width: 20%;
+  border-right: 2px solid var(--primary-color);
+}
+body main .container .menu > div {
+  width: 100%;
+  gap: 5px;
+}
+body main .container .menu > div button {
+  width: calc(100% - 2em);
+  background: rgba(134, 190, 218, 0.3333333333);
+  color: var(--white);
+  height: 40px;
+  font-family: "Inter";
+  font-size: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  opacity: 1;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+body main .container .menu > div button:hover, body main .container .menu > div button:focus {
+  opacity: 0.8;
+}
+body main .container .content {
+  width: calc(80% - 2em);
+  padding: 1em;
+}/*# sourceMappingURL=profile.css.map */
