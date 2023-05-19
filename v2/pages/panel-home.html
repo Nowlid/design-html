@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/styles/sheet.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/panel.css">
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/panel.js"></script>
+
+</head>
+<body class="loaded">
+
+    <div class="loader-container">
+        <div class="page-loader col-center">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div>
+
+    <header class="row align-center space-between">
+        <button class="carret"><span></span></button>
+
+        <div class="sidebar">
+            <div class="mailbox">
+                <!--  -->
+            </div>
+
+            <div class="user row-center">
+                <div class="avatar col-center">
+                    <img src="../assets/images/logo.webp" alt="avatar">
+                </div>
+
+                <span>Bonjour, User User</span>
+            </div>
+        </div>
+    </header>
+
+    <menu class="column">
+        <h1 class="row align-center">Nowlid <span>Panel</span></h1>
+
+        <div class="user row align-center">
+            <div class="avatar col-center">
+                <img src="../assets/images/logo.webp" alt="avatar">
+                <span class="status d-block"></span>
+            </div>
+
+            <div class="name column">
+                User User <span>Client</span>
+            </div>
+        </div>
+
+        <nav>
+            <li class="active">
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Espace client
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Tâches
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Commandes
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Devis
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Services
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Transactions
+                    </span>
+                </a>
+            </li>
+            <!-- <li class="expand"> -->
+            <li>
+                <!-- <a class="row align-center" href="./"> -->
+                <a class="row align-center" onclick="this.parentElement.classList.toggle('expand')">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center space-between">
+                        Boutique
+
+                        <span class="carret col-center">
+                            <img src="../assets/images/arrow.png" alt="">
+                        </span>
+                    </span>
+                </a>
+
+                <ul>
+                    <li><a href="./">Exemple</a></li>
+                    <li><a href="./">Web</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Panier <span class="badge col-center">17</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Avis client
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./">
+                    <div class="icon col-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Support technique
+                    </span>
+                </a>
+            </li>
+        </nav>
+    </menu>
+
+</body>
+</html>

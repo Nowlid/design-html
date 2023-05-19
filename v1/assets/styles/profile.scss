@@ -1,0 +1,40 @@
+body main {
+    height: calc(100vh - 200px);
+
+    .container {
+        height: 100%;
+        width: calc(100% - 4em);
+        padding: 0 2em;
+
+        .menu {
+            width: 20%;
+            border-right: 2px solid var(--primary-color);
+
+            > div {
+                width: 100%;
+                gap: 5px;
+
+                button {
+                    width: calc(100% - 2em);
+                    background: #86beda55;
+                    color: var(--white);
+                    height: 40px;
+                    font-family: "Inter";
+                    font-size: 1rem;
+                    border: 1px solid var(--primary-color);
+                    border-radius: 6px;
+                    opacity: 1;
+                    transition: all .4s;
+                    cursor: pointer;
+
+                    &:hover, &:focus { opacity: .8 }
+                }
+            }
+        }
+
+        .content {
+            width: calc(80% - 2em);
+            padding: 1em;
+        }
+    }
+}

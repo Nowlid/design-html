@@ -1,3 +1,7 @@
+body {
+  background: var(--background-color);
+  overflow: hidden;
+}
 body header {
   padding: 1.2em 2em;
   position: fixed;
@@ -11,6 +15,7 @@ body header .logo img {
   height: 70px;
   -o-object-fit: contain;
      object-fit: contain;
+  transform: scale(2) translateX(15%);
 }
 body header .logo span {
   color: var(--primary-color);
@@ -52,20 +57,17 @@ body header nav li a button::before, body header nav li a button::after {
   height: 4px;
   background: var(--primary-color);
   border-radius: 3px;
+  transform: rotate(45deg);
   top: calc(50% - 1px);
 }
 body header nav li a button::before {
   left: 0;
-  transform: rotate(45deg);
 }
 body header nav li a button::after {
   right: 0;
   transform: rotate(-45deg);
 }
-body header nav li a:hover {
-  opacity: 0.7;
-}
-body header nav li a:focus {
+body header nav li a:hover, body header nav li a:focus {
   opacity: 0.7;
 }
 body header nav li .dropdown {
@@ -101,6 +103,12 @@ body header nav li .dropdown li a {
 body header nav li .dropdown li a:hover, body header nav li .dropdown li a:focus {
   text-decoration-color: initial;
 }
+body header nav li.active button {
+  transform: rotate(0.5turn);
+}
+body header nav li.active .dropdown {
+  animation: dropdown 0.5s forwards;
+}
 @keyframes dropdown {
   from {
     display: none;
@@ -124,12 +132,6 @@ body header nav li .dropdown li a:hover, body header nav li .dropdown li a:focus
     opacity: 0;
     top: 2.5em;
   }
-}
-body header nav li.active button {
-  transform: rotate(0.5turn);
-}
-body header nav li.active .dropdown {
-  animation: dropdown 0.5s forwards;
 }
 body header .auth-action {
   gap: 1.5em;
@@ -236,4 +238,26 @@ body main section#abilities .container .card {
   min-width: 200px;
   padding: 1em;
   margin: 1em 0;
+}
+body main section#abilities .container .card .icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 1em;
+}
+body main section#abilities .container .card .icon img {
+  filter: var(--primary-filter);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main section#abilities .container .card .icon img:not(:first-child) {
+  position: absolute;
+  left: 0;
+  transform: scale(115%);
+  filter: var(--primary-filter) blur(2px) opacity(15%);
+}
+body main section#abilities .container .card .icon img:last-child {
+  transform: scale(85%);
 }/*# sourceMappingURL=home.css.map */
