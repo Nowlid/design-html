@@ -3,6 +3,7 @@ $m-transition: all .4s;
 
 :root {
     --panel-1: #211895;
+    --panel-1-f: invert(22%) sepia(86%) saturate(4702%) hue-rotate(244deg) brightness(57%) contrast(113%);
     --panel-2: #38425e;
     --panel-2-f: invert(25%) sepia(15%) saturate(1147%) hue-rotate(187deg) brightness(92%) contrast(93%);
     --panel-3: #191c24;
@@ -10,14 +11,30 @@ $m-transition: all .4s;
     --panel-4-f: invert(45%) sepia(32%) saturate(391%) hue-rotate(193deg) brightness(91%) contrast(81%);
     --panel-4-2: #6c729333;
     --panel-5: #0f1015;
+    --panel-6: #0d0d0d;
     --panel-red: #fc424a;
+    --panel-red-f: invert(50%) sepia(66%) saturate(6143%) hue-rotate(335deg) brightness(102%) contrast(98%);
     --panel-yellow: #ffab00;
+    --panel-yellow-f: invert(81%) sepia(49%) saturate(5318%) hue-rotate(0deg) brightness(104%) contrast(104%);
     --panel-green: #00d25b;
+    --panel-green-f: invert(79%) sepia(45%) saturate(5916%) hue-rotate(98deg) brightness(94%) contrast(101%);
     --panel-purple: #8f5fe0;
+    --panel-purple-f: invert(39%) sepia(12%) saturate(3436%) hue-rotate(223deg) brightness(109%) contrast(89%);
 }
+
+[data-color="red"] { filter: var(--panel-red-f) !important }
+[data-color="yellow"] { filter: var(--panel-yellow-f) !important }
+[data-color="green"] { filter: var(--panel-green-f) !important }
+[data-color="blue"] { filter: var(--panel-1-f) !important }
+[data-color="purple"] { filter: var(--panel-purple-f) !important }
+
+::-webkit-scrollbar { background: var(--panel-3) }
+::-webkit-scrollbar-thumb { border-color: var(--panel-3) }
 
 body {
     background: var(--black);
+
+    .loader-container .page-loader { background: var(--panel-3) }
 
     header, menu {
         position: fixed;
@@ -32,7 +49,7 @@ body {
         width: calc(100% - 240px);
         left: 240px;
         padding: 0 15px;
-        position: relative;
+        box-shadow: 0 20px 35px -15px #0008;
 
         button.carret {
             padding: 4px 12px;
@@ -71,27 +88,195 @@ body {
         }
 
         .sidebar {
-            .user {
-                padding: 8px 0;
-                margin: 0 16px;
+            > div {
+                height: 70px;
+                position: relative;
 
-                .avatar {
-                    width: 35px;
-                    height: 35px;
-                    border-radius: 50%;
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    position: relative;
+                }
+
+                .dropdown {
+                    position: absolute;
+                    top: 60px;
+                    background: var(--panel-3);
+                    right: 15px;
+                    box-shadow: 0 0 35px -3px var(--black);
+                    border-radius: 3px;
                     overflow: hidden;
+                    flex-direction: column;
+                    animation: headerDropDownClose .4s forwards;
+                    min-height: 50px;
 
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
+                    p, a {
+                        color: var(--white);
+                        font-weight: 300;
+                    }
+
+                    > p {
+                        border-bottom: 1px solid #2c2e33;
+                        padding: 16px;
+                        font-size: 15px;
+                        opacity: 95%;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        padding: 11px 13px;
+                        font-size: 14px;
+                        cursor: pointer;
+
+                        .icon-box {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: var(--panel-6);
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                transform: scale(55%) translate(1px, -1px);
+                            }
+                        }
+
+                        &:hover, &:focus { background: #13151b }
+                    }
+
+                    &.active { animation: headerDropDownOpen .4s forwards }
+                }
+
+                &:not(:first-child)::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 1px;
+                    height: 35px;
+                    background: var(--panel-2);
+                    left: 0;
+                }
+            }
+
+            .mailbox {
+                button {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 15px;
+
+                    .status {
+                        position: absolute;
+                        width: 7px;
+                        height: 7px;
+                        background: var(--panel-red);
+                        border-radius: 50%;
+                        top: 6px; // (30px - 18px) / 2
+                        right: 5px; // same - 1px
+                        z-index: 2;
+                        opacity: 0;
+                    }
+
+                    .icon {
+                        width: 18px;
+                        height: 18px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            filter: invert(1);
+                        }
+                    }
+
+                    &.new-notification .status { opacity: 1 }
+                }
+
+                .dropdown {
+                    width: 280px;
+
+                    a p {
+                        font-size: 14px;
+                        padding-left: 15px;
+                        line-height: 13px;
+
+                        span {
+                            font-size: 13px;
+                            margin-top: 4px;
+                            color: var(--panel-4);
+                        }
+                    }
+                }
+            }
+
+            .user-box {
+                button.user {
+                    padding: 8px 0;
+                    margin: 0 16px;
+                    height: 100%;
+
+                    .avatar {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    span {
+                        margin-left: 16px;
+                        color: var(--white);
+                        font-size: 14px;
+                        pointer-events: none;
                     }
                 }
 
-                span {
-                    margin-left: 16px;
-                    color: var(--white);
-                    font-size: 14px;
+                .dropdown {
+                    right: 0;
+                    width: 210px;
+
+                    a {
+                        height: 62px;
+                        border-bottom: 1px solid #2c2e33;
+
+                        span {
+                            padding-left: 15px;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+
+            @keyframes headerDropDownOpen {
+                from {
+                    transform: translateY(-15px);
+                    opacity: 0;
+                    display: none;
+                    pointer-events: none;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                    display: flex;
+                }
+            }
+
+            @keyframes headerDropDownClose {
+                from {
+                    transform: translateY(0);
+                    opacity: 1;
+                    display: flex;
+                }
+                to {
+                    transform: translateY(-15px);
+                    opacity: 0;
+                    display: none;
+                    pointer-events: none;
                 }
             }
         }
@@ -100,6 +285,7 @@ body {
     menu {
         width: 240px;
         height: 100%;
+        overflow: hidden;
 
         h1 {
             height: 70px;
@@ -111,6 +297,17 @@ body {
             gap: .4rem;
 
             span { font-weight: 700 }
+
+            &::before {
+                content: '';
+                text-align: center;
+                font-weight: 600;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                pointer-events: none;
+                color: var(--panel-2);
+            }
         }
 
         .user {
@@ -261,7 +458,7 @@ body {
                     }
                 }
 
-                &.active > a {
+                &.current > a {
                     color: var(--white);
                     background: var(--panel-5);
 
@@ -277,5 +474,45 @@ body {
                 }
             }
         }
+    }
+
+    main {
+        margin: 70px 0 0 240px;
+        padding: 30px 28px;
+        transition: $m-transition;
+        color: var(--white);
+
+        h1.title {
+            font-weight: 500;
+            font-size: 2.1rem;
+            width: 100%;
+        }
+    }
+
+    &:not(.expand-menu) {
+        header {
+            width: calc(100% - 70px);
+            left: 70px;
+        }
+
+        menu {
+            width: 70px;
+
+            h1 {
+                width: 3rem;
+                color: transparent;
+
+                &::before { content: 'NP' }
+            }
+
+            .user .name { display: none }
+
+            nav li a {
+                width: calc(100% - 10px);
+                span { display: none }
+            }
+        }
+
+        main { margin: 70px 0 0 70px }
     }
 }

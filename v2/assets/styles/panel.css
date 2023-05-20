@@ -1,5 +1,6 @@
 :root {
   --panel-1: #211895;
+  --panel-1-f: invert(22%) sepia(86%) saturate(4702%) hue-rotate(244deg) brightness(57%) contrast(113%);
   --panel-2: #38425e;
   --panel-2-f: invert(25%) sepia(15%) saturate(1147%) hue-rotate(187deg) brightness(92%) contrast(93%);
   --panel-3: #191c24;
@@ -7,14 +8,50 @@
   --panel-4-f: invert(45%) sepia(32%) saturate(391%) hue-rotate(193deg) brightness(91%) contrast(81%);
   --panel-4-2: #6c729333;
   --panel-5: #0f1015;
+  --panel-6: #0d0d0d;
   --panel-red: #fc424a;
+  --panel-red-f: invert(50%) sepia(66%) saturate(6143%) hue-rotate(335deg) brightness(102%) contrast(98%);
   --panel-yellow: #ffab00;
+  --panel-yellow-f: invert(81%) sepia(49%) saturate(5318%) hue-rotate(0deg) brightness(104%) contrast(104%);
   --panel-green: #00d25b;
+  --panel-green-f: invert(79%) sepia(45%) saturate(5916%) hue-rotate(98deg) brightness(94%) contrast(101%);
   --panel-purple: #8f5fe0;
+  --panel-purple-f: invert(39%) sepia(12%) saturate(3436%) hue-rotate(223deg) brightness(109%) contrast(89%);
+}
+
+[data-color=red] {
+  filter: var(--panel-red-f) !important;
+}
+
+[data-color=yellow] {
+  filter: var(--panel-yellow-f) !important;
+}
+
+[data-color=green] {
+  filter: var(--panel-green-f) !important;
+}
+
+[data-color=blue] {
+  filter: var(--panel-1-f) !important;
+}
+
+[data-color=purple] {
+  filter: var(--panel-purple-f) !important;
+}
+
+::-webkit-scrollbar {
+  background: var(--panel-3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-color: var(--panel-3);
 }
 
 body {
   background: var(--black);
+}
+body .loader-container .page-loader {
+  background: var(--panel-3);
 }
 body header, body menu {
   position: fixed;
@@ -28,7 +65,7 @@ body header {
   width: calc(100% - 240px);
   left: 240px;
   padding: 0 15px;
-  position: relative;
+  box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.5333333333);
 }
 body header button.carret {
   padding: 4px 12px;
@@ -67,30 +104,178 @@ body header button.carret > span, body header button.carret > span::after, body 
 body header button.carret:hover, body header button.carret:focus {
   opacity: 0.8;
 }
-body header .sidebar .user {
+body header .sidebar > div {
+  height: 70px;
+  position: relative;
+}
+body header .sidebar > div button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+body header .sidebar > div .dropdown {
+  position: absolute;
+  top: 60px;
+  background: var(--panel-3);
+  right: 15px;
+  box-shadow: 0 0 35px -3px var(--black);
+  border-radius: 3px;
+  overflow: hidden;
+  flex-direction: column;
+  animation: headerDropDownClose 0.4s forwards;
+  min-height: 50px;
+}
+body header .sidebar > div .dropdown p, body header .sidebar > div .dropdown a {
+  color: var(--white);
+  font-weight: 300;
+}
+body header .sidebar > div .dropdown > p {
+  border-bottom: 1px solid #2c2e33;
+  padding: 16px;
+  font-size: 15px;
+  opacity: 95%;
+}
+body header .sidebar > div .dropdown a {
+  text-decoration: none;
+  padding: 11px 13px;
+  font-size: 14px;
+  cursor: pointer;
+}
+body header .sidebar > div .dropdown a .icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--panel-6);
+}
+body header .sidebar > div .dropdown a .icon-box img {
+  width: 100%;
+  height: 100%;
+  transform: scale(55%) translate(1px, -1px);
+}
+body header .sidebar > div .dropdown a:hover, body header .sidebar > div .dropdown a:focus {
+  background: #13151b;
+}
+body header .sidebar > div .dropdown.active {
+  animation: headerDropDownOpen 0.4s forwards;
+}
+body header .sidebar > div:not(:first-child)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 35px;
+  background: var(--panel-2);
+  left: 0;
+}
+body header .sidebar .mailbox button {
+  width: 30px;
+  height: 30px;
+  margin: 0 15px;
+}
+body header .sidebar .mailbox button .status {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--panel-red);
+  border-radius: 50%;
+  top: 6px;
+  right: 5px;
+  z-index: 2;
+  opacity: 0;
+}
+body header .sidebar .mailbox button .icon {
+  width: 18px;
+  height: 18px;
+}
+body header .sidebar .mailbox button .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: invert(1);
+}
+body header .sidebar .mailbox button.new-notification .status {
+  opacity: 1;
+}
+body header .sidebar .mailbox .dropdown {
+  width: 280px;
+}
+body header .sidebar .mailbox .dropdown a p {
+  font-size: 14px;
+  padding-left: 15px;
+  line-height: 13px;
+}
+body header .sidebar .mailbox .dropdown a p span {
+  font-size: 13px;
+  margin-top: 4px;
+  color: var(--panel-4);
+}
+body header .sidebar .user-box button.user {
   padding: 8px 0;
   margin: 0 16px;
+  height: 100%;
 }
-body header .sidebar .user .avatar {
+body header .sidebar .user-box button.user .avatar {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   overflow: hidden;
 }
-body header .sidebar .user .avatar img {
+body header .sidebar .user-box button.user .avatar img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-body header .sidebar .user span {
+body header .sidebar .user-box button.user span {
   margin-left: 16px;
   color: var(--white);
   font-size: 14px;
+  pointer-events: none;
+}
+body header .sidebar .user-box .dropdown {
+  right: 0;
+  width: 210px;
+}
+body header .sidebar .user-box .dropdown a {
+  height: 62px;
+  border-bottom: 1px solid #2c2e33;
+}
+body header .sidebar .user-box .dropdown a span {
+  padding-left: 15px;
+  pointer-events: none;
+}
+@keyframes headerDropDownOpen {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    display: flex;
+  }
+}
+@keyframes headerDropDownClose {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+    display: flex;
+  }
+  to {
+    transform: translateY(-15px);
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
 }
 body menu {
   width: 240px;
   height: 100%;
+  overflow: hidden;
 }
 body menu h1 {
   height: 70px;
@@ -103,6 +288,16 @@ body menu h1 {
 }
 body menu h1 span {
   font-weight: 700;
+}
+body menu h1::before {
+  content: "";
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  color: var(--panel-2);
 }
 body menu .user {
   width: 100%;
@@ -240,11 +435,11 @@ body menu nav > li ul li a {
 body menu nav > li ul li a:hover, body menu nav > li ul li a:focus {
   color: var(--white);
 }
-body menu nav > li.active > a {
+body menu nav > li.current > a {
   color: var(--white);
   background: var(--panel-5);
 }
-body menu nav > li.active > a::before {
+body menu nav > li.current > a::before {
   background: var(--panel-1);
 }
 body menu nav > li.expand {
@@ -256,4 +451,41 @@ body menu nav > li.expand > a > span span.carret {
 }
 body menu nav > li.expand ul {
   display: flex;
+}
+body main {
+  margin: 70px 0 0 240px;
+  padding: 30px 28px;
+  transition: all 0.4s;
+  color: var(--white);
+}
+body main h1.title {
+  font-weight: 500;
+  font-size: 2.1rem;
+  width: 100%;
+}
+body:not(.expand-menu) header {
+  width: calc(100% - 70px);
+  left: 70px;
+}
+body:not(.expand-menu) menu {
+  width: 70px;
+}
+body:not(.expand-menu) menu h1 {
+  width: 3rem;
+  color: transparent;
+}
+body:not(.expand-menu) menu h1::before {
+  content: "NP";
+}
+body:not(.expand-menu) menu .user .name {
+  display: none;
+}
+body:not(.expand-menu) menu nav li a {
+  width: calc(100% - 10px);
+}
+body:not(.expand-menu) menu nav li a span {
+  display: none;
+}
+body:not(.expand-menu) main {
+  margin: 70px 0 0 70px;
 }/*# sourceMappingURL=panel.css.map */
