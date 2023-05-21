@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #0f52ba;
+  --background-color: #e2f6f6;
+  --blue-2: #3974cf;
+}
+
+body, div, main, h1, h3, p, img {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Inter";
+}
+
+html {
+  box-sizing: border-box;
+  overflow: hidden auto;
+}
+
+::-moz-selection {
+  color: var(--white);
+  background: #444;
+}
+
+::selection {
+  color: var(--white);
+  background: #444;
+}
+
+h1, h3, p {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  width: 100%;
+  background: var(--background-color);
+}
+body main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+body main > div {
+  width: calc(50% - 5em);
+}
+body main .container h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+  text-shadow: -3px 3px 5px rgba(57, 116, 207, 0.2235294118);
+}
+body main .container h3 {
+  color: var(--blue-2);
+  font-size: 2rem;
+}
+body main .container p {
+  margin-top: 1em;
+  text-align: center;
+}
+body main .illustration img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 700px) {
+  body main > div {
+    width: 100%;
+  }
+  body main .container p {
+    padding: 0 2em;
+  }
+}
+body main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/gradient-1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+  opacity: 85%;
+}
+@supports (width: min(1px, 1dvw)) {
+  body, body main {
+    width: 100dvw;
+    height: 100dvh;
+  }
+}/*# sourceMappingURL=work-in-progress.css.map */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Mon profil - Nowlid</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900">
+    <link rel="stylesheet" href="../assets/styles/sheet.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/profile.css">
+
+    <script src="../assets/js/app.js"></script>
+
+</head>
+<body id="profile">
+
+    <div class="loader-container">
+        <div class="page-loader col-center">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div>
+
+    <header class="row space-between align-center">
+        <div class="logo row-center">
+            <img src="../assets/images/header-logo.png" alt="Nowlid">
+        </div>
+
+        <button class="dropdown col-center" type="button">
+            <span class="carret"></span>
+        </button>
+
+        <nav class="row col-center">
+            <li><a class="nav-link row-center" href="/">
+                <img src="../assets/images/home-icon.png" alt="Accueil" class="icon">
+                <span>Accueil</span>
+            </a></li>
+
+            <li><a class="nav-link row-center" href="/">
+                <img src="../assets/images/projects-icon.png" alt="Projets" class="icon">
+                <span>Projets</span>
+            </a></li>
+
+            <li><a class="nav-link row-center" href="/">
+                <img src="../assets/images/contact-icon.png" alt="Contact" class="icon">
+                <span>Contact</span>
+            </a></li>
+        </nav>
+
+        <div class="auth row-center">
+            <a class="register row-center" href="/">
+                <img src="../assets/images/register-icon.png" alt="Inscription" class="icon">
+                <span>Inscription</span>
+            </a>
+
+            <a class="login row-center" href="/">
+                <img src="../assets/images/login-icon.png" alt="Connexion" class="icon">
+                <span>Connexion</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container row">
+            <div class="menu column justify-center space-between">
+                <div class="first col-center">
+                    <button type="button" id="preview">Aperçu</button>
+                    <button type="button" id="params">Paramètres</button>
+                </div>
+
+                <div class="second col-center">
+                    <button type="button" id="delete">Supprimer</button>
+                    <button type="button" id="logout">Se déconnecter</button>
+                </div>
+            </div>
+
+            <div class="content">
+                Contenu
+            </div>
+        </div>
+    </main>
+
+    <footer class="col-center">
+        Copyright &copy;&ensp;-&ensp;Nowlid&ensp;-&ensp;All rights reserved
+    </footer>
+
+</body>
+</html>

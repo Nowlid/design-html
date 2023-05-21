@@ -17,6 +17,14 @@ window.addEventListener('load', () => {
             flexcards.components.container
                 .querySelectorAll('.flexcards__arrow')
                 .forEach(e => e.style.display = "none");
+
+            // up button
+            const btnUp = document.querySelector('main > button.carret-up');
+
+            document.addEventListener('scroll', () => (btnUp.classList[
+                document.firstElementChild.scrollTop > 200 ? 'add' : 'remove'
+            ]('active')));
+            btnUp.addEventListener('click', () => window.scroll({ top: 0, behavior: 'smooth' }));
         }
     } else if (/login|register/.test(document.body.id)) {
         const form = document.querySelector('section > form');

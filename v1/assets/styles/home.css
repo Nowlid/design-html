@@ -1,3 +1,47 @@
+body main .carret-up {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1.2em;
+  left: 1em;
+  background: var(--background);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.4s;
+  opacity: 0;
+  border: 3px solid var(--white);
+}
+body main .carret-up span {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+body main .carret-up span::before, body main .carret-up span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 25px;
+  background: var(--primary-color);
+  border-radius: 3px;
+  transform: rotate(40deg);
+  top: -14px;
+}
+body main .carret-up span::after {
+  transform: rotate(320deg);
+  left: 4px;
+}
+body main .carret-up span::before {
+  left: -9.5px;
+}
+body main .carret-up.active {
+  opacity: 1;
+}
 body main > section {
   position: relative;
   width: 100%;
@@ -164,6 +208,9 @@ body main section#abilities .container#mobile .card::before {
     padding-right: 3em;
     width: 100%;
   }
+  body main section#abilities .container .card .content h3 {
+    text-align: center;
+  }
   body main section#abilities .container .card .content p {
     margin-bottom: 1em;
   }
@@ -172,5 +219,8 @@ body main section#abilities .container#mobile .card::before {
   }
   body main section#abilities .container#mobile {
     display: flex;
+  }
+  body main section#abilities .container > .flexcards__container {
+    border-radius: 0.5em;
   }
 }/*# sourceMappingURL=home.css.map */

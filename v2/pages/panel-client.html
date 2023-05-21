@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Client</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/styles/sheet.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/panel.css">
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/panel.js"></script>
+
+</head>
+<body class="expand-menu">
+
+    <div class="loader-container">
+        <div class="page-loader col-center">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div>
+
+    <header class="row align-center space-between">
+        <button class="carret"><span></span></button>
+
+        <div class="sidebar row-center">
+            <div class="mailbox row-center">
+                <button class="row-center new-notification" type="button">
+                    <span class="status"></span>
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Mail">
+                    </div>
+                </button>
+
+                <div class="dropdown">
+                    <p>Vos emails reçus</p>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Message" data-color="green">
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Message" data-color="green">
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Message" data-color="green">
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Message" data-color="green">
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Message" data-color="green">
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Message" data-color="green">
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="user-box row-center">
+                <button class="user row-center" type="button">
+                    <div class="avatar icon-box-center">
+                        <img src="../assets/images/logo.webp" alt="avatar">
+                    </div>
+
+                    <span>Bonjour, User User</span>
+                </button>
+
+                <div class="dropdown">
+                    <p class="status">Connecté depuis le 19/05 à 18:43</p>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Infos"  data-color="green">
+                        </div>
+
+                        <span>Vos informations</span>
+                    </a>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Infos"  data-color="blue">
+                        </div>
+
+                        <span>Vos emails reçus</span>
+                    </a>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Infos"  data-color="purple">
+                        </div>
+
+                        <span>Historique d'activité</span>
+                    </a>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center">
+                            <img src="../assets/images/code.png" alt="Infos"  data-color="red">
+                        </div>
+
+                        <span>Déconnexion</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <menu class="column">
+        <h1 class="row align-center">Nowlid <span>Panel</span></h1>
+
+        <div class="user row align-center">
+            <div class="avatar icon-box-center">
+                <img src="../assets/images/logo.webp" alt="avatar">
+                <span class="status d-block"></span>
+            </div>
+
+            <div class="name column">
+                User User <span>Client</span>
+            </div>
+        </div>
+
+        <nav>
+            <li class="current">
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/palette.png" alt="Icon" data-color="green">
+                    </div>
+                    <span class="row align-center">Espace client</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+                    <span class="row align-center">Tâches</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+                    <span class="row align-center">Commandes</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+                    <span class="row align-center">Devis</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+                    <span class="row align-center">Services</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+                    <span class="row align-center">Transactions</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/palette.png" alt="Icon" data-color="purple">
+                    </div>
+
+                    <span class="row align-center space-between">
+                        Boutique
+
+                        <span class="carret col-center">
+                            <img src="../assets/images/arrow.png" alt="shop">
+                        </span>
+                    </span>
+                </a>
+
+                <ul>
+                    <li><a href="#">Exemple</a></li>
+                    <li><a href="#">Web</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+
+                    <span class="row align-center">
+                        Panier <span class="badge col-center">17</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+                    <span class="row align-center">Avis client</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="#">
+                    <div class="icon icon-box-center">
+                        <img src="../assets/images/code.png" alt="Icon">
+                    </div>
+                    <span class="row align-center">Support technique</span>
+                </a>
+            </li>
+        </nav>
+    </menu>
+
+    <main role="main" class="col-center" id="client">
+        <section id="shop-banner">
+            <div class="content">
+                <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
+                Nam nisi labore, vitae distinctio ad vel accusamus suscipit cumque fugiat sapiente
+                <b>possimus</b>, repellat omnis! Quos necessitatibus nihil enim saepe ab.
+            </div>
+
+            <div class="fix"></div>
+        </section>
+
+        <h1 class="title">Espace client</h1>
+
+        <section id="overview" class="row-center wrap">
+            <div class="card col-center" id="services">
+                <h3 class="title">Services actifs</h3>
+
+                <div class="content row space-between align-center wrap">
+                    <span class="count">1</span>
+                    <div class="icon-box icon-box-center">
+                        <img src="../assets/images/palette.png" alt="Services" data-color="red">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-center" id="transactions">
+                <h3 class="title">Transactions</h3>
+
+                <div class="content row space-between align-center wrap">
+                    <span class="count">0</span>
+                    <div class="icon-box icon-box-center">
+                        <img src="../assets/images/palette.png" alt="Transactions" data-color="green">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-center" id="wallet">
+                <h3 class="title">Porte feuille</h3>
+
+                <div class="content row space-between align-center wrap">
+                    <span class="count">0.5</span>
+                    <div class="icon-box icon-box-center">
+                        <img src="../assets/images/palette.png" alt="Wallet" data-color="blue">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-center" id="topics">
+                <h3 class="title">Demandes ouvertes</h3>
+
+                <div class="content row space-between align-center wrap">
+                    <span class="count">0</span>
+                    <div class="icon-box icon-box-center">
+                        <img src="../assets/images/palette.png" alt="Topics" data-color="yellow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview-details" class="row space-between wrap">
+            <div class="table-container col-center">
+                <div class="table-box">
+                    <h3>Vos services</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nom du produit</th>
+                                <th>Temps restant</th>
+                                <th>État</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Web starter</td>
+                                <td><span class="badge success">225 Jours</span></td>
+                                <td><span class="badge unsuccess">Hors ligne</span></td>
+                                <td><button class="btn-access" type="button">Accéder</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-box">
+                    <h3>Vos transactions</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Montant</th>
+                                <th>Date & Heure</th>
+                                <th>État</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>3,00 €</td>
+                                <td>01/12/22 22:22:34</td>
+                                <td><span class="badge success">Complétée</span></td>
+                                <td><button class="btn-access" type="button">Accéder</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-box">
+                    <h3>Vos commandes</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Montant</th>
+                                <th>Date & Heure</th>
+                                <th>État</th>
+                                <th>Type de paiement</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>3,00 €</td>
+                                <td>01/12/22 22:22:34</td>
+                                <td><span class="badge in-process">En cours</span></td>
+                                <td>Wallet</td>
+                                <td><button class="btn-access" type="button">Accéder</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-box">
+                    <h3>Vos devis</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Montant</th>
+                                <th>Date & Heure</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td colspan="4">Aucun enregistrement trouvé</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="contact-overview col-center">
+                <div class="infos-box column" id="support">
+                    <h3>Support technique</h3>
+
+                    <div class="user row align-center">
+                        <div class="avatar icon-box-center">
+                            <img src="../assets/images/logo.webp" alt="Admin">
+                        </div>
+
+                        <div class="user-infos column">
+                            <p>Admin Nowlid</p>
+                            <span>Vous à répondu <span>il y a 5 mois</span></span>
+                        </div>
+                    </div>
+
+                    <div class="message-content">
+                        Lorem ipsum<br><br>Dolor sit amet consectetur adipisicing elit. Quisquam labore inventore, numquam eveniet cupiditate dolorum sapiente voluptatum quaerat delectus aspernatur corrupti voluptatem suscipit aperiam eaque facilis et, sed maxime repellendus porro eius. Ipsam animi, quis necessitatibus quod officia hic odio molestias. Corrupti veritatis eveniet voluptate ipsa cupiditate explicabo ad voluptates, blanditiis totam voluptatibus at placeat officiis officia suscipit ut beatae! Suscipit, necessitatibus, quisquam nam eveniet officia consectetur a voluptates omnis vel sed vero cum aut eius iusto fugiat dolorem magni neque similique accusamus obcaecati quas aspernatur? Ex maxime nemo molestiae nihil est iusto saepe excepturi dolorem porro, harum, deleniti a numquam, ipsum neque officiis sequi earum eos voluptatibus vero error quibusdam maiores! Dignissimos hic saepe maxime quos laborum.
+                    </div>
+
+                    <div class="btn-box column align-f-end">
+                        <button type="button" class="row">
+                            <img src="../assets/images/code.png" alt="Answer">
+                            Répondre
+                        </button>
+                    </div>
+                </div>
+
+                <div class="infos-box column" id="activities">
+                    <div class="item-box row align-center">
+                        <div class="icon icon-box-center">
+                            <img src="../assets/images/code.png" alt="Icon">
+                        </div>
+
+                        <div class="content row space-between align-center">
+                            <div class="informations column">
+                                <span class="date">Il y a 2 minutes</span>
+                                <span class="activity-name">Censured</span>
+                            </div>
+
+                            <div class="timestamp">07:05</div>
+                        </div>
+                    </div>
+
+                    <div class="item-box row align-center">
+                        <div class="icon icon-box-center">
+                            <img src="../assets/images/code.png" alt="Icon">
+                        </div>
+
+                        <div class="content row space-between align-center">
+                            <div class="informations column">
+                                <span class="date">Il y a 4 heures</span>
+                                <span class="activity-name">Censured</span>
+                            </div>
+
+                            <div class="timestamp">03:05</div>
+                        </div>
+                    </div>
+
+                    <div class="item-box row align-center">
+                        <div class="icon icon-box-center">
+                            <img src="../assets/images/code.png" alt="Icon">
+                        </div>
+
+                        <div class="content row space-between align-center">
+                            <div class="informations column">
+                                <span class="date">Il y a 6 heures</span>
+                                <span class="activity-name">Censured</span>
+                            </div>
+
+                            <div class="timestamp">01:05</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pinned-products" class="column">
+            <h2>Nos produits épinglés</h2>
+
+            <div class="container row space-between wrap">
+                <div class="product-card col-center">
+                    <h3>Web Starter</h3>
+                    <p class="price">3,00 € / mois</p>
+
+                    <ul>
+                        <li>25 Go SSD</li>
+                        <li>5 Domaines</li>
+                        <li>5 Comptes e-mail</li>
+                        <li>50 Comptes FTP</li>
+                        <li>25 Sous-domaines</li>
+                        <li>5 Bases de données</li>
+                        <li>Trafic illimité</li>
+                        <li>Anti DDoS Support disponible 24/7/365</li>
+                    </ul>
+
+                    <button type="button">
+                        Ajouter au panier
+                    </button>
+                </div>
+
+                <div class="product-card col-center">
+                    <h3>Web Starter</h3>
+                    <p class="price">5,00 € / mois</p>
+
+                    <ul>
+                        <li>25 GO SSD</li>
+                        <li>5 GO RAM</li>
+                        <li>5 Base de données</li>
+                        <li>5 Sauvegardes</li>
+                        <li>Sous domaine personnalisé</li>
+                        <li>Panel performant</li>
+                        <li>Trafic illimité</li>
+                        <li>Anti DDOS Support disponible 24/7/365</li>
+                    </ul>
+
+                    <button type="button">
+                        Ajouter au panier
+                    </button>
+                </div>
+
+                <div class="product-card col-center">
+                    <h3>Web Starter</h3>
+                    <p class="price">10,00 € / mois</p>
+
+                    <ul>
+                        <li>50 GO SSD</li>
+                        <li>Domaines illimités</li>
+                        <li>Comptes e-mails illimités</li>
+                        <li>Comptes FTP illimités</li>
+                        <li>Sous domaines illimités</li>
+                        <li>Bases de données illimitées</li>
+                        <li>Trafic illimité Anti DDOS</li>
+                        <li>Support disponible 24/7/365</li>
+                    </ul>
+
+                    <button type="button">
+                        Ajouter au panier
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="row space-between">
+        <span class="copyright">Copyright &copy; Ezequiel Dev (lol le copyright)</span>
+        <span class="version">1.0.0</span>
+    </footer>
+
+</body>
+</html>
