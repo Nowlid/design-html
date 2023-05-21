@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
     const header = document.body.querySelector('header');
     const menu = document.body.querySelector('menu');
     const nav = menu.querySelector('nav');
+    const main = document.body.querySelector('main');
 
     var menuState = 0;
 
@@ -16,7 +17,7 @@ window.addEventListener('load', () => {
     nav.querySelectorAll('li > ul').forEach(a => {
         a.parentElement.querySelector('a').addEventListener('click', b => {
             b.preventDefault();
-            menuState && a.parentElement.classList.toggle('expand');
+            menuState || a.parentElement.classList.toggle('expand');
             b.currentTarget.blur();
         });
     });
@@ -32,4 +33,14 @@ window.addEventListener('load', () => {
             ));
         });
     });
+
+    // Shop banner
+    const resizeBanner = () => {
+        main.querySelector('#shop-banner > div.fix').style.height =
+            (main.querySelector('#shop-banner > div.content').clientHeight - 10).toString() + "px";
+    };
+
+    resizeBanner();
+    document.addEventListener('scroll', resizeBanner);
+    window.addEventListener('resize', resizeBanner);
 });

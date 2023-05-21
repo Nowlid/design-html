@@ -9,6 +9,7 @@
   --panel-4-2: #6c729333;
   --panel-5: #0f1015;
   --panel-6: #0d0d0d;
+  --panel-7: #2c2e33;
   --panel-red: #fc424a;
   --panel-red-f: invert(50%) sepia(66%) saturate(6143%) hue-rotate(335deg) brightness(102%) contrast(98%);
   --panel-yellow: #ffab00;
@@ -49,6 +50,7 @@
 
 body {
   background: var(--black);
+  min-height: calc(100% - 70px);
 }
 body .loader-container .page-loader {
   background: var(--panel-3);
@@ -131,7 +133,7 @@ body header .sidebar > div .dropdown p, body header .sidebar > div .dropdown a {
   font-weight: 300;
 }
 body header .sidebar > div .dropdown > p {
-  border-bottom: 1px solid #2c2e33;
+  border-bottom: 1px solid var(--panel-7);
   padding: 16px;
   font-size: 15px;
   opacity: 95%;
@@ -149,8 +151,6 @@ body header .sidebar > div .dropdown a .icon-box {
   background: var(--panel-6);
 }
 body header .sidebar > div .dropdown a .icon-box img {
-  width: 100%;
-  height: 100%;
   transform: scale(55%) translate(1px, -1px);
 }
 body header .sidebar > div .dropdown a:hover, body header .sidebar > div .dropdown a:focus {
@@ -189,10 +189,6 @@ body header .sidebar .mailbox button .icon {
   height: 18px;
 }
 body header .sidebar .mailbox button .icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
   filter: invert(1);
 }
 body header .sidebar .mailbox button.new-notification .status {
@@ -222,12 +218,6 @@ body header .sidebar .user-box button.user .avatar {
   border-radius: 50%;
   overflow: hidden;
 }
-body header .sidebar .user-box button.user .avatar img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 body header .sidebar .user-box button.user span {
   margin-left: 16px;
   color: var(--white);
@@ -240,11 +230,13 @@ body header .sidebar .user-box .dropdown {
 }
 body header .sidebar .user-box .dropdown a {
   height: 62px;
-  border-bottom: 1px solid #2c2e33;
 }
 body header .sidebar .user-box .dropdown a span {
   padding-left: 15px;
   pointer-events: none;
+}
+body header .sidebar .user-box .dropdown a:not(:last-child) {
+  border-bottom: 1px solid var(--panel-7);
 }
 @keyframes headerDropDownOpen {
   from {
@@ -311,10 +303,6 @@ body menu .user .avatar {
   position: relative;
 }
 body menu .user .avatar img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
   border-radius: 100%;
 }
 body menu .user .avatar .status {
@@ -363,10 +351,6 @@ body menu nav > li > a .icon {
   margin: 0 6px;
 }
 body menu nav > li > a .icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
   transform: scale(0.55) translateY(-1px);
   filter: invert(1);
 }
@@ -454,14 +438,311 @@ body menu nav > li.expand ul {
 }
 body main {
   margin: 70px 0 0 240px;
-  padding: 30px 28px;
+  padding: 30px 28px 0;
   transition: all 0.4s;
   color: var(--white);
+}
+body main section#shop-banner {
+  color: var(--black);
+  position: relative;
+  width: 100%;
+}
+body main section#shop-banner .content {
+  background: #14e1bf;
+  position: absolute;
+  top: -30px;
+  left: -28px;
+  width: calc(100% + 56px);
+  height: auto;
+  padding: 0 12px;
+  font-size: 14px;
+  border-bottom: 16px solid var(--panel-3);
+}
+body main section#shop-banner .fix {
+  width: 100%;
+}
+body main section#shop-banner:not(:last-child) {
+  margin-bottom: 24px;
 }
 body main h1.title {
   font-weight: 500;
   font-size: 2.1rem;
   width: 100%;
+  margin-bottom: 12px;
+}
+body main#client > section {
+  width: 100%;
+}
+body main#client > section:not(:last-child) {
+  margin-bottom: 24px;
+}
+body main#client section#overview {
+  gap: 24px;
+}
+body main#client section#overview .card {
+  background: var(--panel-3);
+  padding: 28px 25px;
+  border-radius: 4px;
+  min-width: 200px;
+  width: calc(25% - 50px - 18px);
+}
+body main#client section#overview .card h3 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+body main#client section#overview .card .content {
+  width: 100%;
+}
+body main#client section#overview .card .content span.count {
+  font-size: 30px;
+  height: 30px;
+}
+body main#client section#overview .card .content .icon-box {
+  width: 60px;
+  height: 60px;
+}
+body main#client section#overview-details {
+  width: 100%;
+  min-height: 300px;
+}
+body main#client section#overview-details .table-container {
+  width: calc(66.66% - 24px);
+  gap: 24px;
+  position: relative;
+}
+body main#client section#overview-details .table-container .table-box {
+  padding: 28px 25px;
+  background: var(--panel-3);
+  border-radius: 4px;
+  width: calc(100% - 50px);
+}
+body main#client section#overview-details .table-container .table-box h3 {
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  position: relative;
+  top: -8px;
+}
+body main#client section#overview-details .table-container .table-box table {
+  border: none;
+  color: var(--panel-4);
+  border-collapse: collapse;
+  width: 100%;
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td, body main#client section#overview-details .table-container .table-box table tbody tr th, body main#client section#overview-details .table-container .table-box table thead tr td, body main#client section#overview-details .table-container .table-box table thead tr th {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 15px;
+  border: 1px solid var(--panel-7);
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td .badge, body main#client section#overview-details .table-container .table-box table tbody tr th .badge, body main#client section#overview-details .table-container .table-box table thead tr td .badge, body main#client section#overview-details .table-container .table-box table thead tr th .badge {
+  font-size: 12px;
+  color: var(--white);
+  padding: 8px 11px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td .badge.success, body main#client section#overview-details .table-container .table-box table tbody tr th .badge.success, body main#client section#overview-details .table-container .table-box table thead tr td .badge.success, body main#client section#overview-details .table-container .table-box table thead tr th .badge.success {
+  background: var(--panel-green);
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td .badge.in-process, body main#client section#overview-details .table-container .table-box table tbody tr th .badge.in-process, body main#client section#overview-details .table-container .table-box table thead tr td .badge.in-process, body main#client section#overview-details .table-container .table-box table thead tr th .badge.in-process {
+  background: var(--panel-yellow);
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td .badge.unsuccess, body main#client section#overview-details .table-container .table-box table tbody tr th .badge.unsuccess, body main#client section#overview-details .table-container .table-box table thead tr td .badge.unsuccess, body main#client section#overview-details .table-container .table-box table thead tr th .badge.unsuccess {
+  background: var(--panel-red);
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td button.btn-access, body main#client section#overview-details .table-container .table-box table tbody tr th button.btn-access, body main#client section#overview-details .table-container .table-box table thead tr td button.btn-access, body main#client section#overview-details .table-container .table-box table thead tr th button.btn-access {
+  background: var(--panel-1);
+  border-radius: 4px;
+  font-size: 15px;
+  color: var(--white);
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px -3px var(--panel-5);
+  opacity: 1;
+  transition: all 0.2s;
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td button.btn-access:hover, body main#client section#overview-details .table-container .table-box table tbody tr td button.btn-access:focus, body main#client section#overview-details .table-container .table-box table tbody tr th button.btn-access:hover, body main#client section#overview-details .table-container .table-box table tbody tr th button.btn-access:focus, body main#client section#overview-details .table-container .table-box table thead tr td button.btn-access:hover, body main#client section#overview-details .table-container .table-box table thead tr td button.btn-access:focus, body main#client section#overview-details .table-container .table-box table thead tr th button.btn-access:hover, body main#client section#overview-details .table-container .table-box table thead tr th button.btn-access:focus {
+  opacity: 85%;
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td:is(th), body main#client section#overview-details .table-container .table-box table tbody tr th:is(th), body main#client section#overview-details .table-container .table-box table thead tr td:is(th), body main#client section#overview-details .table-container .table-box table thead tr th:is(th) {
+  border-top-width: 0;
+}
+body main#client section#overview-details .table-container .table-box table tbody tr td:first-child, body main#client section#overview-details .table-container .table-box table tbody tr th:first-child, body main#client section#overview-details .table-container .table-box table thead tr td:first-child, body main#client section#overview-details .table-container .table-box table thead tr th:first-child {
+  text-align: center;
+}
+body main#client section#overview-details .contact-overview {
+  height: 100%;
+  width: 33.33%;
+  gap: 24px;
+}
+body main#client section#overview-details .contact-overview .infos-box {
+  background: var(--panel-3);
+  padding: 28px 25px;
+  border-radius: 4px;
+  width: calc(100% - 48px);
+}
+body main#client section#overview-details .contact-overview .infos-box#support h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  position: relative;
+  top: -8px;
+}
+body main#client section#overview-details .contact-overview .infos-box#support .user {
+  margin-bottom: 30px;
+}
+body main#client section#overview-details .contact-overview .infos-box#support .user .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+body main#client section#overview-details .contact-overview .infos-box#support .user .user-infos p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+body main#client section#overview-details .contact-overview .infos-box#support .user .user-infos > span {
+  font-size: 12px;
+  color: #34395e;
+  font-weight: 500;
+}
+body main#client section#overview-details .contact-overview .infos-box#support .user .user-infos > span span {
+  margin-left: 10px;
+  color: var(--panel-1);
+}
+body main#client section#overview-details .contact-overview .infos-box#support .message-content {
+  font-size: 14px;
+  color: var(--panel-4);
+  margin-bottom: 1rem;
+}
+body main#client section#overview-details .contact-overview .infos-box#support .btn-box button {
+  background: var(--panel-1);
+  color: var(--white);
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px -3px var(--panel-5);
+  opacity: 1;
+  transition: all 0.2s;
+}
+body main#client section#overview-details .contact-overview .infos-box#support .btn-box button img {
+  width: 14px;
+  height: 14px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 0.4rem;
+  filter: invert(1);
+}
+body main#client section#overview-details .contact-overview .infos-box#support .btn-box button:hover, body main#client section#overview-details .contact-overview .infos-box#support .btn-box button:focus {
+  opacity: 85%;
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box {
+  padding: 16px 0;
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box .icon {
+  height: 40px;
+  width: 40px;
+  background: var(--panel-1);
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box .icon img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box .content {
+  padding-left: 15px;
+  width: calc(100% - 55px);
+  height: 40px;
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box .content .informations span.date {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box .content .informations span.activity-name {
+  font-size: 14px;
+  color: var(--panel-4);
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box .content .timestamp {
+  font-size: 14px;
+  color: var(--panel-4);
+  height: 100%;
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box:first-child {
+  padding-top: 0;
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box:last-child {
+  padding-bottom: 0;
+}
+body main#client section#overview-details .contact-overview .infos-box#activities .item-box:not(:last-child) {
+  border-bottom: 1px solid var(--panel-7);
+}
+body main#client section#pinned-products h2 {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+body main#client section#pinned-products .container {
+  width: 100%;
+}
+body main#client section#pinned-products .container .product-card {
+  border: 1px solid var(--panel-green);
+  background: var(--panel-3);
+  border-radius: 5px;
+  width: calc(33.33% - 72px);
+  padding: 28px 25px;
+}
+body main#client section#pinned-products .container .product-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+body main#client section#pinned-products .container .product-card p.price {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+body main#client section#pinned-products .container .product-card ul {
+  margin-bottom: 16px;
+}
+body main#client section#pinned-products .container .product-card ul li {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+body main#client section#pinned-products .container .product-card ul li::marker {
+  content: "- ";
+}
+body main#client section#pinned-products .container .product-card button {
+  background: transparent;
+  border: 1px solid var(--panel-green);
+  border-radius: 4px;
+  color: var(--panel-green);
+  padding: 16px 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  text-align: center;
+}
+body main#client section#pinned-products .container .product-card button:hover, body main#client section#pinned-products .container .product-card button:focus {
+  color: var(--white);
+  background: var(--panel-green);
+}
+body footer {
+  margin: 70px 0 0 240px;
+  padding: 0 28px 30px;
+  transition: all 0.4s;
+  font-size: 13px;
+}
+body footer .copyright {
+  color: var(--panel-4);
+}
+body footer .version {
+  color: var(--white);
 }
 body:not(.expand-menu) header {
   width: calc(100% - 70px);
@@ -486,6 +767,6 @@ body:not(.expand-menu) menu nav li a {
 body:not(.expand-menu) menu nav li a span {
   display: none;
 }
-body:not(.expand-menu) main {
+body:not(.expand-menu) main, body:not(.expand-menu) footer {
   margin: 70px 0 0 70px;
 }/*# sourceMappingURL=panel.css.map */
