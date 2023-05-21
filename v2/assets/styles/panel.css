@@ -15,9 +15,12 @@
   --panel-yellow: #ffab00;
   --panel-yellow-f: invert(81%) sepia(49%) saturate(5318%) hue-rotate(0deg) brightness(104%) contrast(104%);
   --panel-green: #00d25b;
+  --panel-green-1: #006d2f;
+  --panel-green-2: #ccf6de;
   --panel-green-f: invert(79%) sepia(45%) saturate(5916%) hue-rotate(98deg) brightness(94%) contrast(101%);
   --panel-purple: #8f5fe0;
   --panel-purple-f: invert(39%) sepia(12%) saturate(3436%) hue-rotate(223deg) brightness(109%) contrast(89%);
+  --panel-blue: #007bff;
 }
 
 [data-color=red] {
@@ -441,27 +444,27 @@ body main {
   padding: 30px 28px 0;
   transition: all 0.4s;
   color: var(--white);
-}
-body main section#shop-banner {
-  color: var(--black);
   position: relative;
+}
+body main section#ad-banner {
+  color: var(--black);
   width: 100%;
 }
-body main section#shop-banner .content {
+body main section#ad-banner .content {
   background: #14e1bf;
   position: absolute;
-  top: -30px;
-  left: -28px;
-  width: calc(100% + 56px);
+  top: 0px;
+  left: 0px;
+  width: calc(100% - 24px);
   height: auto;
   padding: 0 12px;
   font-size: 14px;
   border-bottom: 16px solid var(--panel-3);
 }
-body main section#shop-banner .fix {
+body main section#ad-banner .fix {
   width: 100%;
 }
-body main section#shop-banner:not(:last-child) {
+body main section#ad-banner:not(:last-child) {
   margin-bottom: 24px;
 }
 body main h1.title {
@@ -469,6 +472,47 @@ body main h1.title {
   font-size: 2.1rem;
   width: 100%;
   margin-bottom: 12px;
+}
+body main table.table-panel-style {
+  border: none;
+  color: var(--panel-4);
+  border-collapse: collapse;
+  width: 100%;
+  overflow: scroll;
+}
+body main table.table-panel-style tbody tr td, body main table.table-panel-style tbody tr th, body main table.table-panel-style thead tr td, body main table.table-panel-style thead tr th {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 15px;
+  border: 1px solid var(--panel-7);
+  white-space: nowrap;
+}
+body main table.table-panel-style tbody tr td .badge, body main table.table-panel-style tbody tr th .badge, body main table.table-panel-style thead tr td .badge, body main table.table-panel-style thead tr th .badge {
+  font-size: 12px;
+  color: var(--white);
+  padding: 8px 11px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+body main table.table-panel-style tbody tr td .badge.important, body main table.table-panel-style tbody tr th .badge.important, body main table.table-panel-style thead tr td .badge.important, body main table.table-panel-style thead tr th .badge.important {
+  background: var(--panel-purple);
+}
+body main table.table-panel-style tbody tr td .badge.in-process, body main table.table-panel-style tbody tr th .badge.in-process, body main table.table-panel-style thead tr td .badge.in-process, body main table.table-panel-style thead tr th .badge.in-process {
+  background: var(--panel-yellow);
+}
+body main table.table-panel-style tbody tr td .badge.success, body main table.table-panel-style tbody tr th .badge.success, body main table.table-panel-style thead tr td .badge.success, body main table.table-panel-style thead tr th .badge.success {
+  background: var(--panel-green);
+}
+body main table.table-panel-style tbody tr td .badge.unsuccess, body main table.table-panel-style tbody tr th .badge.unsuccess, body main table.table-panel-style thead tr td .badge.unsuccess, body main table.table-panel-style thead tr th .badge.unsuccess {
+  background: var(--panel-red);
+}
+body main table.table-panel-style tbody tr td:is(th), body main table.table-panel-style tbody tr th:is(th), body main table.table-panel-style thead tr td:is(th), body main table.table-panel-style thead tr th:is(th) {
+  border-top-width: 0;
+}
+body main .panel-section-box {
+  padding: 28px 25px;
+  border-radius: 4px;
+  background: var(--panel-3);
 }
 body main#client > section {
   width: 100%;
@@ -480,9 +524,6 @@ body main#client section#overview {
   gap: 24px;
 }
 body main#client section#overview .card {
-  background: var(--panel-3);
-  padding: 28px 25px;
-  border-radius: 4px;
   min-width: 200px;
   width: calc(25% - 50px - 18px);
 }
@@ -513,9 +554,6 @@ body main#client section#overview-details .table-container {
   position: relative;
 }
 body main#client section#overview-details .table-container .table-box {
-  padding: 28px 25px;
-  background: var(--panel-3);
-  border-radius: 4px;
   width: calc(100% - 50px);
 }
 body main#client section#overview-details .table-container .table-box h3 {
@@ -525,35 +563,7 @@ body main#client section#overview-details .table-container .table-box h3 {
   position: relative;
   top: -8px;
 }
-body main#client section#overview-details .table-container .table-box table {
-  border: none;
-  color: var(--panel-4);
-  border-collapse: collapse;
-  width: 100%;
-}
-body main#client section#overview-details .table-container .table-box table tbody tr td, body main#client section#overview-details .table-container .table-box table tbody tr th, body main#client section#overview-details .table-container .table-box table thead tr td, body main#client section#overview-details .table-container .table-box table thead tr th {
-  font-weight: 400;
-  font-size: 14px;
-  padding: 15px;
-  border: 1px solid var(--panel-7);
-}
-body main#client section#overview-details .table-container .table-box table tbody tr td .badge, body main#client section#overview-details .table-container .table-box table tbody tr th .badge, body main#client section#overview-details .table-container .table-box table thead tr td .badge, body main#client section#overview-details .table-container .table-box table thead tr th .badge {
-  font-size: 12px;
-  color: var(--white);
-  padding: 8px 11px;
-  border-radius: 4px;
-  font-weight: 500;
-}
-body main#client section#overview-details .table-container .table-box table tbody tr td .badge.success, body main#client section#overview-details .table-container .table-box table tbody tr th .badge.success, body main#client section#overview-details .table-container .table-box table thead tr td .badge.success, body main#client section#overview-details .table-container .table-box table thead tr th .badge.success {
-  background: var(--panel-green);
-}
-body main#client section#overview-details .table-container .table-box table tbody tr td .badge.in-process, body main#client section#overview-details .table-container .table-box table tbody tr th .badge.in-process, body main#client section#overview-details .table-container .table-box table thead tr td .badge.in-process, body main#client section#overview-details .table-container .table-box table thead tr th .badge.in-process {
-  background: var(--panel-yellow);
-}
-body main#client section#overview-details .table-container .table-box table tbody tr td .badge.unsuccess, body main#client section#overview-details .table-container .table-box table tbody tr th .badge.unsuccess, body main#client section#overview-details .table-container .table-box table thead tr td .badge.unsuccess, body main#client section#overview-details .table-container .table-box table thead tr th .badge.unsuccess {
-  background: var(--panel-red);
-}
-body main#client section#overview-details .table-container .table-box table tbody tr td button.btn-access, body main#client section#overview-details .table-container .table-box table tbody tr th button.btn-access, body main#client section#overview-details .table-container .table-box table thead tr td button.btn-access, body main#client section#overview-details .table-container .table-box table thead tr th button.btn-access {
+body main#client section#overview-details .table-container .table-box td button.btn-access, body main#client section#overview-details .table-container .table-box th button.btn-access {
   background: var(--panel-1);
   border-radius: 4px;
   font-size: 15px;
@@ -565,13 +575,10 @@ body main#client section#overview-details .table-container .table-box table tbod
   opacity: 1;
   transition: all 0.2s;
 }
-body main#client section#overview-details .table-container .table-box table tbody tr td button.btn-access:hover, body main#client section#overview-details .table-container .table-box table tbody tr td button.btn-access:focus, body main#client section#overview-details .table-container .table-box table tbody tr th button.btn-access:hover, body main#client section#overview-details .table-container .table-box table tbody tr th button.btn-access:focus, body main#client section#overview-details .table-container .table-box table thead tr td button.btn-access:hover, body main#client section#overview-details .table-container .table-box table thead tr td button.btn-access:focus, body main#client section#overview-details .table-container .table-box table thead tr th button.btn-access:hover, body main#client section#overview-details .table-container .table-box table thead tr th button.btn-access:focus {
+body main#client section#overview-details .table-container .table-box td button.btn-access:hover, body main#client section#overview-details .table-container .table-box td button.btn-access:focus, body main#client section#overview-details .table-container .table-box th button.btn-access:hover, body main#client section#overview-details .table-container .table-box th button.btn-access:focus {
   opacity: 85%;
 }
-body main#client section#overview-details .table-container .table-box table tbody tr td:is(th), body main#client section#overview-details .table-container .table-box table tbody tr th:is(th), body main#client section#overview-details .table-container .table-box table thead tr td:is(th), body main#client section#overview-details .table-container .table-box table thead tr th:is(th) {
-  border-top-width: 0;
-}
-body main#client section#overview-details .table-container .table-box table tbody tr td:first-child, body main#client section#overview-details .table-container .table-box table tbody tr th:first-child, body main#client section#overview-details .table-container .table-box table thead tr td:first-child, body main#client section#overview-details .table-container .table-box table thead tr th:first-child {
+body main#client section#overview-details .table-container .table-box td:first-child:not([colspan="4"]), body main#client section#overview-details .table-container .table-box th:first-child:not([colspan="4"]) {
   text-align: center;
 }
 body main#client section#overview-details .contact-overview {
@@ -580,9 +587,6 @@ body main#client section#overview-details .contact-overview {
   gap: 24px;
 }
 body main#client section#overview-details .contact-overview .infos-box {
-  background: var(--panel-3);
-  padding: 28px 25px;
-  border-radius: 4px;
   width: calc(100% - 48px);
 }
 body main#client section#overview-details .contact-overview .infos-box#support h3 {
@@ -692,10 +696,7 @@ body main#client section#pinned-products .container {
 }
 body main#client section#pinned-products .container .product-card {
   border: 1px solid var(--panel-green);
-  background: var(--panel-3);
-  border-radius: 5px;
   width: calc(33.33% - 72px);
-  padding: 28px 25px;
 }
 body main#client section#pinned-products .container .product-card h3 {
   margin-bottom: 8px;
@@ -732,9 +733,65 @@ body main#client section#pinned-products .container .product-card button:hover, 
   color: var(--white);
   background: var(--panel-green);
 }
+body main#tasks > section {
+  width: calc(100% - 48px);
+}
+body main#tasks > section:not(:last-child) {
+  margin-bottom: 16px;
+}
+body main#tasks section#ping p {
+  padding: 12px 20px;
+  background: var(--panel-green-2);
+  color: var(--panel-green-1);
+  border-radius: 4px;
+}
+body main#tasks section#ping p small {
+  font-size: 75%;
+}
+body main#tasks section#tasks-list th {
+  text-align: initial;
+}
+body main#tasks section#tasks-list td a {
+  color: var(--panel-blue);
+  -webkit-text-decoration: underline solid transparent 1px;
+          text-decoration: underline solid transparent 1px;
+  transition: all 0.2s;
+  cursor: pointer;
+  opacity: 1;
+}
+body main#tasks section#tasks-list td a:hover, body main#tasks section#tasks-list td a:focus {
+  text-decoration-color: initial;
+  opacity: 70%;
+}
+body main#tasks section#tasks-list td a.important::before {
+  content: "[IMPORTANT] ";
+}
+body main#tasks section#tasks-list td.progress {
+  gap: 8px;
+  padding: 11px 15px;
+}
+body main#tasks section#tasks-list td.progress > div {
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  background: var(--white);
+  border-radius: 8px;
+}
+body main#tasks section#tasks-list td.progress > div::after {
+  content: "";
+  display: block;
+  width: var(--size);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--panel-purple);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
 body footer {
-  margin: 70px 0 0 240px;
-  padding: 0 28px 30px;
+  margin-left: 240px;
+  padding: 30px 28px;
   transition: all 0.4s;
   font-size: 13px;
 }
@@ -767,6 +824,9 @@ body:not(.expand-menu) menu nav li a {
 body:not(.expand-menu) menu nav li a span {
   display: none;
 }
-body:not(.expand-menu) main, body:not(.expand-menu) footer {
+body:not(.expand-menu) main {
   margin: 70px 0 0 70px;
+}
+body:not(.expand-menu) footer {
+  margin-left: 70px;
 }/*# sourceMappingURL=panel.css.map */
