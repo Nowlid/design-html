@@ -13,7 +13,6 @@ window.addEventListener('load', () => {
         menu.querySelectorAll('nav > li').forEach(e => e.classList.remove('expand'));
         menuState = !menuState;
     });
-    header.querySelector('button.carret').click();
 
     // Expandable menu
     nav.querySelectorAll('li > ul').forEach(a => {
@@ -49,10 +48,19 @@ window.addEventListener('load', () => {
         - main.querySelector('#ad-banner > div.fix').clientHeight // ad-banner
     ).toString() + "px";
 
-    resizeBanner();
-    defMainMin();
-    window.addEventListener('resize', resizeBanner);
-    window.addEventListener('resize', defMainMin);
+    // tables fix
+    const fixTables = () => main.querySelectorAll("table.table-panel-style").forEach(e => (
+        e.parentElement.style.overflow = (
+            Math.sign(e.parentElement.clientWidth - e.clientWidth - 50) !== 1
+                ? "hidden" : "auto"
+        )
+    ));
+
+    const execResizeMethods = () => (resizeBanner(), defMainMin(), fixTables());
+
+    setTimeout(execResizeMethods);
+    setTimeout(fixTables, 500);
+    window.addEventListener('resize', execResizeMethods);
 
     // Page specific rules
     switch (main.id.toLowerCase()) {

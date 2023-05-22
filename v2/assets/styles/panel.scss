@@ -498,8 +498,6 @@ body {
             color: var(--panel-4);
             border-collapse: collapse;
             width: 100%;
-            overflow: scroll;
-            // overflow: auto;
 
             tbody, thead { tr { td, th {
                 font-weight: 400;
@@ -571,7 +569,7 @@ body {
                 width: 100%;
                 min-height: 300px;
 
-                .table-container {
+                .table-items {
                     width: calc(66.66% - 24px);
                     gap: 24px;
                     position: relative;

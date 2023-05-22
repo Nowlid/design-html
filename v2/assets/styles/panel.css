@@ -478,7 +478,6 @@ body main table.table-panel-style {
   color: var(--panel-4);
   border-collapse: collapse;
   width: 100%;
-  overflow: scroll;
 }
 body main table.table-panel-style tbody tr td, body main table.table-panel-style tbody tr th, body main table.table-panel-style thead tr td, body main table.table-panel-style thead tr th {
   font-weight: 400;
@@ -548,22 +547,22 @@ body main#client section#overview-details {
   width: 100%;
   min-height: 300px;
 }
-body main#client section#overview-details .table-container {
+body main#client section#overview-details .table-items {
   width: calc(66.66% - 24px);
   gap: 24px;
   position: relative;
 }
-body main#client section#overview-details .table-container .table-box {
+body main#client section#overview-details .table-items .table-box {
   width: calc(100% - 50px);
 }
-body main#client section#overview-details .table-container .table-box h3 {
+body main#client section#overview-details .table-items .table-box h3 {
   font-weight: 500;
   margin-bottom: 8px;
   font-size: 1.5rem;
   position: relative;
   top: -8px;
 }
-body main#client section#overview-details .table-container .table-box td button.btn-access, body main#client section#overview-details .table-container .table-box th button.btn-access {
+body main#client section#overview-details .table-items .table-box td button.btn-access, body main#client section#overview-details .table-items .table-box th button.btn-access {
   background: var(--panel-1);
   border-radius: 4px;
   font-size: 15px;
@@ -575,10 +574,10 @@ body main#client section#overview-details .table-container .table-box td button.
   opacity: 1;
   transition: all 0.2s;
 }
-body main#client section#overview-details .table-container .table-box td button.btn-access:hover, body main#client section#overview-details .table-container .table-box td button.btn-access:focus, body main#client section#overview-details .table-container .table-box th button.btn-access:hover, body main#client section#overview-details .table-container .table-box th button.btn-access:focus {
+body main#client section#overview-details .table-items .table-box td button.btn-access:hover, body main#client section#overview-details .table-items .table-box td button.btn-access:focus, body main#client section#overview-details .table-items .table-box th button.btn-access:hover, body main#client section#overview-details .table-items .table-box th button.btn-access:focus {
   opacity: 85%;
 }
-body main#client section#overview-details .table-container .table-box td:first-child:not([colspan="4"]), body main#client section#overview-details .table-container .table-box th:first-child:not([colspan="4"]) {
+body main#client section#overview-details .table-items .table-box td:first-child:not([colspan="4"]), body main#client section#overview-details .table-items .table-box th:first-child:not([colspan="4"]) {
   text-align: center;
 }
 body main#client section#overview-details .contact-overview {
