@@ -547,7 +547,7 @@ body {
             background: var(--panel-3);
         }
 
-        &#client {
+        &#client-page {
             > section {
                 width: 100%;
                 &:not(:last-child) { margin-bottom: 24px }
@@ -792,7 +792,7 @@ body {
             }
         }
 
-        &#tasks {
+        &#tasks-page {
             > section {
                 width: calc(100% - 48px);
                 &:not(:last-child) { margin-bottom: 16px }
@@ -855,7 +855,7 @@ body {
             }
         }
 
-        &#orders section { width: calc(100% - 50px) }
+        &#orders-page section { width: calc(100% - 50px) }
     }
 
     footer {
