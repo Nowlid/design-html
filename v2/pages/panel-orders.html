@@ -16,7 +16,7 @@
     <script src="../assets/js/panel.js"></script>
 
 </head>
-<body class="expand-menu">
+<body class="loaded expand-menu">
 
     <div class="loader-container">
         <div class="page-loader col-center">
@@ -167,7 +167,7 @@
         </div>
 
         <nav>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-client.html">
                     <div class="icon icon-box-center">
                         <img src="../assets/images/palette.png" alt="Icon" data-color="green">
@@ -183,7 +183,7 @@
                     <span class="row align-center">Tâches</span>
                 </a>
             </li>
-            <li>
+            <li class="current">
                 <a class="row align-center" href="./panel-orders.html">
                     <div class="icon icon-box-center">
                         <img src="../assets/images/code.png" alt="Icon">
@@ -265,7 +265,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center">
+    <main role="main" class="column align-center" id="orders">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -276,7 +276,34 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Espace</h1>
+        <h1 class="title">Vos commandes</h1>
+
+        <section class="panel-section-box">
+            <table class="table-panel-style">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Montants</th>
+                        <th>Date & Heure</th>
+                        <th>États</th>
+                        <th>Payer avec</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>3,00 €</td>
+                        <td>01/12/22 22:22:34</td>
+                        <td><span class="badge success">Complétée</span></td>
+                        <td>Wallet</td>
+                        <td>
+                            <button class="btn-access" type="button">Accéder</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer class="row space-between">

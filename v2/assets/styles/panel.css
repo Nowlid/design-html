@@ -485,6 +485,22 @@ body main table.table-panel-style tbody tr td, body main table.table-panel-style
   padding: 15px;
   border: 1px solid var(--panel-7);
   white-space: nowrap;
+  text-align: left;
+}
+body main table.table-panel-style tbody tr td button.btn-access, body main table.table-panel-style tbody tr th button.btn-access, body main table.table-panel-style thead tr td button.btn-access, body main table.table-panel-style thead tr th button.btn-access {
+  background: var(--panel-1);
+  border-radius: 4px;
+  font-size: 15px;
+  color: var(--white);
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px -3px var(--panel-5);
+  opacity: 1;
+  transition: all 0.2s;
+}
+body main table.table-panel-style tbody tr td button.btn-access:hover, body main table.table-panel-style tbody tr td button.btn-access:focus, body main table.table-panel-style tbody tr th button.btn-access:hover, body main table.table-panel-style tbody tr th button.btn-access:focus, body main table.table-panel-style thead tr td button.btn-access:hover, body main table.table-panel-style thead tr td button.btn-access:focus, body main table.table-panel-style thead tr th button.btn-access:hover, body main table.table-panel-style thead tr th button.btn-access:focus {
+  opacity: 85%;
 }
 body main table.table-panel-style tbody tr td .badge, body main table.table-panel-style tbody tr th .badge, body main table.table-panel-style thead tr td .badge, body main table.table-panel-style thead tr th .badge {
   font-size: 12px;
@@ -507,6 +523,9 @@ body main table.table-panel-style tbody tr td .badge.unsuccess, body main table.
 }
 body main table.table-panel-style tbody tr td:is(th), body main table.table-panel-style tbody tr th:is(th), body main table.table-panel-style thead tr td:is(th), body main table.table-panel-style thead tr th:is(th) {
   border-top-width: 0;
+}
+body main table.table-panel-style thead.center-text tr td {
+  text-align: center;
 }
 body main .panel-section-box {
   padding: 28px 25px;
@@ -561,21 +580,6 @@ body main#client section#overview-details .table-items .table-box h3 {
   font-size: 1.5rem;
   position: relative;
   top: -8px;
-}
-body main#client section#overview-details .table-items .table-box td button.btn-access, body main#client section#overview-details .table-items .table-box th button.btn-access {
-  background: var(--panel-1);
-  border-radius: 4px;
-  font-size: 15px;
-  color: var(--white);
-  padding: 6px 12px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 10px -3px var(--panel-5);
-  opacity: 1;
-  transition: all 0.2s;
-}
-body main#client section#overview-details .table-items .table-box td button.btn-access:hover, body main#client section#overview-details .table-items .table-box td button.btn-access:focus, body main#client section#overview-details .table-items .table-box th button.btn-access:hover, body main#client section#overview-details .table-items .table-box th button.btn-access:focus {
-  opacity: 85%;
 }
 body main#client section#overview-details .table-items .table-box td:first-child:not([colspan="4"]), body main#client section#overview-details .table-items .table-box th:first-child:not([colspan="4"]) {
   text-align: center;
@@ -787,6 +791,9 @@ body main#tasks section#tasks-list td.progress > div::after {
   background: var(--panel-purple);
   border-radius: 8px;
   transition: all 0.2s ease;
+}
+body main#orders section {
+  width: calc(100% - 50px);
 }
 body footer {
   margin-left: 240px;
