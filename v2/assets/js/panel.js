@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
     const menu = document.body.querySelector('menu');
     const nav = menu.querySelector('nav');
     const main = document.body.querySelector('main');
+    const footer = document.body.querySelector('footer');
 
     var menuState = 0;
 
@@ -34,13 +35,43 @@ window.addEventListener('load', () => {
         });
     });
 
-    // Shop banner
+    // Ad banner
     const resizeBanner = () => {
-        main.querySelector('#shop-banner > div.fix').style.height =
-            (main.querySelector('#shop-banner > div.content').clientHeight - 10).toString() + "px";
+        main.querySelector('#ad-banner > div.fix').style.height =
+            (main.querySelector('#ad-banner > div.content').clientHeight - 10).toString() + "px";
     };
 
-    resizeBanner();
-    document.addEventListener('scroll', resizeBanner);
-    window.addEventListener('resize', resizeBanner);
+    // main min-heigth
+    const defMainMin = () => main.style.minHeight = (
+        window.innerHeight - 61 // header + fix + ad-banner
+        - footer.clientHeight // footer
+        - main.querySelector('#ad-banner > div.fix').clientHeight // ad-banner
+    ).toString() + "px";
+
+    // tables fix
+    const fixTables = () => main.querySelectorAll("table.table-panel-style").forEach(e => (
+        e.parentElement.style.overflow = (
+            Math.sign(e.parentElement.clientWidth - e.clientWidth - 50) !== 1
+                ? "hidden" : "auto"
+        )
+    ));
+
+    const execResizeMethods = () => (resizeBanner(), defMainMin(), fixTables());
+
+    setTimeout(execResizeMethods);
+    setTimeout(fixTables, 500);
+    window.addEventListener('resize', execResizeMethods);
+
+    // Page specific rules
+    switch (main.id.toLowerCase()) {
+        case "tasks":
+            main.querySelectorAll('#tasks-list > table > tbody > tr > td').forEach(e => (
+                e.classList.contains('progress') && (e.querySelector('span').innerHTML += ` (${
+                    e.style.getPropertyValue('--size')
+                })`)
+            ));
+            break;
+
+        default: break;
+    }
 });

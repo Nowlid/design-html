@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Panel base</title>
+    <title>Vos transactions</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -157,7 +157,7 @@
         </div>
 
         <nav>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-client.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-tachometer-alt" data-color="green"></i>
@@ -197,7 +197,7 @@
                     <span class="row align-center">Services</span>
                 </a>
             </li>
-            <li>
+            <li class="current">
                 <a class="row align-center" href="./panel-transactions.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-file-invoice"></i>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center">
+    <main role="main" class="column align-center" id="transactions-page">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,7 +266,35 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Espace</h1>
+        <h1 class="title">Vos transactions</h1>
+
+        <section class="panel-section-box">
+            <table class="table-panel-style">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Montants</th>
+                        <th>Date & Heure</th>
+                        <th>États</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>3,00 €</td>
+                        <td>01/12/22 22:22:34</td>
+                        <td><span class="badge success">Complétée</span></td>
+                        <td class="row">
+                            <button class="get-pdf icon-box-center">
+                                <i class="fa fa-file-pdf"></i>
+                            </button>
+                            <button class="btn-access" type="button">Accéder</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer class="row space-between">

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Panel base</title>
+    <title>Vos services</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -157,7 +157,7 @@
         </div>
 
         <nav>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-client.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-tachometer-alt" data-color="green"></i>
@@ -189,7 +189,7 @@
                     <span class="row align-center">Devis</span>
                 </a>
             </li>
-            <li>
+            <li class="current">
                 <a class="row align-center" href="./panel-services.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-cubes"></i>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center">
+    <main role="main" class="column align-center" id="services-page">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,7 +266,49 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Espace</h1>
+        <h1 class="title">Vos services</h1>
+
+        <div class="container row wrap">
+            <section id="list" class="panel-section-box">
+                <table class="table-panel-style">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nom du produit</th>
+                            <th>Temps restant</th>
+                            <th>État</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Web Starter</td>
+                            <td><div class="badge success">221 jours</div></td>
+                            <td><div class="badge success">En ligne</div></td>
+                            <td>
+                                <button class="btn-access" type="button">
+                                    Acccéder
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="infos-card panel-section-box">
+                <div class="content column space-between">
+                    <div class="text-content">
+                        <h3>Commander</h3>
+                        <p>Visitez notre boutique pour acheter de nouveaux produits et services.</p>
+                    </div>
+
+                    <a href="#" class="row align-center">
+                        Cliquez ici <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="row space-between">

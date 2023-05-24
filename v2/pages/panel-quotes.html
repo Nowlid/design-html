@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Panel base</title>
+    <title>Vos devis</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -157,7 +157,7 @@
         </div>
 
         <nav>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-client.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-tachometer-alt" data-color="green"></i>
@@ -181,7 +181,7 @@
                     <span class="row align-center">Commandes</span>
                 </a>
             </li>
-            <li>
+            <li class="current">
                 <a class="row align-center" href="./panel-quotes.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-file"></i>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center">
+    <main role="main" class="column align-center" id="quotes-page">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,7 +266,25 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Espace</h1>
+        <h1 class="title">Vos devis</h1>
+
+        <section class="panel-section-box">
+            <table class="table-panel-style">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Montants</th>
+                        <th>Date & Heure</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">Aucun enregistrement trouvé</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer class="row space-between">

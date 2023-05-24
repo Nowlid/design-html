@@ -46,6 +46,7 @@ a, button, input[type=radio], input[type=checkbox] {
 ::-webkit-scrollbar {
   background: var(--background-color);
   width: 12px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
