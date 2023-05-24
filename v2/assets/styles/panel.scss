@@ -552,11 +552,17 @@ body {
                     padding: 8px 11px;
                     border-radius: 4px;
                     font-weight: 500;
+                    width: fit-content;
 
                     &.important { background: var(--panel-purple) }
                     &.in-process { background: var(--panel-yellow) }
                     &.success { background: var(--panel-green) }
                     &.unsuccess { background: var(--panel-red) }
+
+                    &.blank {
+                        color: var(--black);
+                        background: var(--white);
+                    }
                 }
 
                 &:is(th) { border-top-width: 0 }
@@ -885,6 +891,62 @@ body {
         }
 
         &#transactions-page section table tbody tr td:last-child { gap: 4px }
+
+        &#services-page, &#support-page { .container {
+            width: 100%;
+            gap: 24px;
+
+            section#list { width: calc(100% - 424px) }
+
+            .infos-card {
+                width: 300px;
+                height: 110px;
+
+                .content {
+                    height: 100%;
+
+                    .text-content {
+                        h3 {
+                            font-weight: 500;
+                            font-size: 20px;
+                            margin-bottom: 8px;
+                        }
+
+                        p { font-size: 14px }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: var(--panel-blue);
+                        gap: .5rem;
+                        transition: $s-transition;
+                        opacity: 1;
+                        cursor: pointer;
+                        position: relative;
+
+                        &::after {
+                            content: 'Cliquez-ici';
+                            display: block;
+                            position: absolute;
+                            width: auto;
+                            height: 1px;
+                            background: transparent;
+                            bottom: 0;
+                            left: 0;
+                            color: transparent;
+                            pointer-events: none;
+                            transition: $s-transition;
+                            transform: scale(98%, 2);
+                        }
+
+                        &:hover, &:focus {
+                            opacity: .8;
+                            &::after { background: var(--panel-blue) }
+                        }
+                    }
+                }
+            }
+        } }
     }
 
     footer {

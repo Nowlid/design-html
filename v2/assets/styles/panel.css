@@ -555,6 +555,8 @@ body main table.table-panel-style tbody tr td .badge, body main table.table-pane
   padding: 8px 11px;
   border-radius: 4px;
   font-weight: 500;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 body main table.table-panel-style tbody tr td .badge.important, body main table.table-panel-style tbody tr th .badge.important, body main table.table-panel-style thead tr td .badge.important, body main table.table-panel-style thead tr th .badge.important {
   background: var(--panel-purple);
@@ -567,6 +569,10 @@ body main table.table-panel-style tbody tr td .badge.success, body main table.ta
 }
 body main table.table-panel-style tbody tr td .badge.unsuccess, body main table.table-panel-style tbody tr th .badge.unsuccess, body main table.table-panel-style thead tr td .badge.unsuccess, body main table.table-panel-style thead tr th .badge.unsuccess {
   background: var(--panel-red);
+}
+body main table.table-panel-style tbody tr td .badge.blank, body main table.table-panel-style tbody tr th .badge.blank, body main table.table-panel-style thead tr td .badge.blank, body main table.table-panel-style thead tr th .badge.blank {
+  color: var(--black);
+  background: var(--white);
 }
 body main table.table-panel-style tbody tr td:is(th), body main table.table-panel-style tbody tr th:is(th), body main table.table-panel-style thead tr td:is(th), body main table.table-panel-style thead tr th:is(th) {
   border-top-width: 0;
@@ -847,6 +853,57 @@ body main#orders-page section, body main#quotes-page section, body main#transact
 }
 body main#transactions-page section table tbody tr td:last-child {
   gap: 4px;
+}
+body main#services-page .container, body main#support-page .container {
+  width: 100%;
+  gap: 24px;
+}
+body main#services-page .container section#list, body main#support-page .container section#list {
+  width: calc(100% - 424px);
+}
+body main#services-page .container .infos-card, body main#support-page .container .infos-card {
+  width: 300px;
+  height: 110px;
+}
+body main#services-page .container .infos-card .content, body main#support-page .container .infos-card .content {
+  height: 100%;
+}
+body main#services-page .container .infos-card .content .text-content h3, body main#support-page .container .infos-card .content .text-content h3 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+body main#services-page .container .infos-card .content .text-content p, body main#support-page .container .infos-card .content .text-content p {
+  font-size: 14px;
+}
+body main#services-page .container .infos-card .content a, body main#support-page .container .infos-card .content a {
+  text-decoration: none;
+  color: var(--panel-blue);
+  gap: 0.5rem;
+  transition: all 0.2s;
+  opacity: 1;
+  cursor: pointer;
+  position: relative;
+}
+body main#services-page .container .infos-card .content a::after, body main#support-page .container .infos-card .content a::after {
+  content: "Cliquez-ici";
+  display: block;
+  position: absolute;
+  width: auto;
+  height: 1px;
+  background: transparent;
+  bottom: 0;
+  left: 0;
+  color: transparent;
+  pointer-events: none;
+  transition: all 0.2s;
+  transform: scale(98%, 2);
+}
+body main#services-page .container .infos-card .content a:hover, body main#services-page .container .infos-card .content a:focus, body main#support-page .container .infos-card .content a:hover, body main#support-page .container .infos-card .content a:focus {
+  opacity: 0.8;
+}
+body main#services-page .container .infos-card .content a:hover::after, body main#services-page .container .infos-card .content a:focus::after, body main#support-page .container .infos-card .content a:hover::after, body main#support-page .container .infos-card .content a:focus::after {
+  background: var(--panel-blue);
 }
 body footer {
   margin-left: 240px;
