@@ -23,23 +23,51 @@
   --panel-blue: #007bff;
 }
 
+[data-color=white] {
+  color: var(--white) !important;
+}
+
+[data-filter-color=white] {
+  filter: invert(1) !important;
+}
+
 [data-color=red] {
+  color: var(--panel-red) !important;
+}
+
+[data-filter-color=red] {
   filter: var(--panel-red-f) !important;
 }
 
 [data-color=yellow] {
+  color: var(--panel-yellow) !important;
+}
+
+[data-filter-color=yellow] {
   filter: var(--panel-yellow-f) !important;
 }
 
 [data-color=green] {
+  color: var(--panel-green) !important;
+}
+
+[data-filter-color=green] {
   filter: var(--panel-green-f) !important;
 }
 
 [data-color=blue] {
+  color: var(--panel-1) !important;
+}
+
+[data-filter-color=blue] {
   filter: var(--panel-1-f) !important;
 }
 
 [data-color=purple] {
+  color: var(--panel-purple) !important;
+}
+
+[data-filter-color=purple] {
   filter: var(--panel-purple-f) !important;
 }
 
@@ -57,6 +85,12 @@ body {
 }
 body .loader-container .page-loader {
   background: var(--panel-3);
+}
+body .generic-icon {
+  color: var(--black);
+}
+body .generic-icon > i {
+  font-size: 18px;
 }
 body header, body menu {
   position: fixed;
@@ -152,6 +186,7 @@ body header .sidebar > div .dropdown a .icon-box {
   height: 40px;
   border-radius: 50%;
   background: var(--panel-6);
+  color: var(--panel-green);
 }
 body header .sidebar > div .dropdown a .icon-box img {
   transform: scale(55%) translate(1px, -1px);
@@ -190,9 +225,7 @@ body header .sidebar .mailbox button .status {
 body header .sidebar .mailbox button .icon {
   width: 18px;
   height: 18px;
-}
-body header .sidebar .mailbox button .icon img {
-  filter: invert(1);
+  color: var(--white);
 }
 body header .sidebar .mailbox button.new-notification .status {
   opacity: 1;
@@ -347,15 +380,16 @@ body menu nav > li > a {
   color: var(--panel-4);
 }
 body menu nav > li > a .icon {
-  width: 30px;
-  height: 30px;
+  width: 31px;
+  height: 31px;
   border-radius: 100%;
   background: var(--panel-4-2);
   margin: 0 6px;
+  font-size: 14px;
+  color: var(--white);
 }
 body menu nav > li > a .icon img {
   transform: scale(0.55) translateY(-1px);
-  filter: invert(1);
 }
 body menu nav > li > a > span {
   font-size: 0.9rem;
@@ -487,8 +521,7 @@ body main table.table-panel-style tbody tr td, body main table.table-panel-style
   white-space: nowrap;
   text-align: left;
 }
-body main table.table-panel-style tbody tr td button.btn-access, body main table.table-panel-style tbody tr th button.btn-access, body main table.table-panel-style thead tr td button.btn-access, body main table.table-panel-style thead tr th button.btn-access {
-  background: var(--panel-1);
+body main table.table-panel-style tbody tr td button, body main table.table-panel-style tbody tr th button, body main table.table-panel-style thead tr td button, body main table.table-panel-style thead tr th button {
   border-radius: 4px;
   font-size: 15px;
   color: var(--white);
@@ -498,8 +531,22 @@ body main table.table-panel-style tbody tr td button.btn-access, body main table
   box-shadow: 0 0 10px -3px var(--panel-5);
   opacity: 1;
   transition: all 0.2s;
+  max-height: 30px;
 }
-body main table.table-panel-style tbody tr td button.btn-access:hover, body main table.table-panel-style tbody tr td button.btn-access:focus, body main table.table-panel-style tbody tr th button.btn-access:hover, body main table.table-panel-style tbody tr th button.btn-access:focus, body main table.table-panel-style thead tr td button.btn-access:hover, body main table.table-panel-style thead tr td button.btn-access:focus, body main table.table-panel-style thead tr th button.btn-access:hover, body main table.table-panel-style thead tr th button.btn-access:focus {
+body main table.table-panel-style tbody tr td button.get-pdf, body main table.table-panel-style tbody tr th button.get-pdf, body main table.table-panel-style thead tr td button.get-pdf, body main table.table-panel-style thead tr th button.get-pdf {
+  height: 30px;
+  width: 30px;
+  background: var(--panel-purple);
+}
+body main table.table-panel-style tbody tr td button.get-pdf img, body main table.table-panel-style tbody tr th button.get-pdf img, body main table.table-panel-style thead tr td button.get-pdf img, body main table.table-panel-style thead tr th button.get-pdf img {
+  width: 18px;
+  height: 18px;
+  transform: translateY(-5%);
+}
+body main table.table-panel-style tbody tr td button.btn-access, body main table.table-panel-style tbody tr th button.btn-access, body main table.table-panel-style thead tr td button.btn-access, body main table.table-panel-style thead tr th button.btn-access {
+  background: var(--panel-1);
+}
+body main table.table-panel-style tbody tr td button:hover, body main table.table-panel-style tbody tr td button:focus, body main table.table-panel-style tbody tr th button:hover, body main table.table-panel-style tbody tr th button:focus, body main table.table-panel-style thead tr td button:hover, body main table.table-panel-style thead tr td button:focus, body main table.table-panel-style thead tr th button:hover, body main table.table-panel-style thead tr th button:focus {
   opacity: 85%;
 }
 body main table.table-panel-style tbody tr td .badge, body main table.table-panel-style tbody tr th .badge, body main table.table-panel-style thead tr td .badge, body main table.table-panel-style thead tr th .badge {
@@ -561,6 +608,8 @@ body main#client-page section#overview .card .content span.count {
 body main#client-page section#overview .card .content .icon-box {
   width: 60px;
   height: 60px;
+  font-size: 60px;
+  overflow: visible;
 }
 body main#client-page section#overview-details {
   width: 100%;
@@ -638,14 +687,16 @@ body main#client-page section#overview-details .contact-overview .infos-box#supp
   box-shadow: 0 0 10px -3px var(--panel-5);
   opacity: 1;
   transition: all 0.2s;
+  gap: 0.4rem;
 }
 body main#client-page section#overview-details .contact-overview .infos-box#support .btn-box button img {
   width: 14px;
   height: 14px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-right: 0.4rem;
-  filter: invert(1);
+}
+body main#client-page section#overview-details .contact-overview .infos-box#support .btn-box button i {
+  font-size: 12px;
 }
 body main#client-page section#overview-details .contact-overview .infos-box#support .btn-box button:hover, body main#client-page section#overview-details .contact-overview .infos-box#support .btn-box button:focus {
   opacity: 85%;
@@ -661,7 +712,6 @@ body main#client-page section#overview-details .contact-overview .infos-box#acti
 body main#client-page section#overview-details .contact-overview .infos-box#activities .item-box .icon img {
   width: 18px;
   height: 18px;
-  filter: invert(1);
 }
 body main#client-page section#overview-details .contact-overview .infos-box#activities .item-box .content {
   padding-left: 15px;
@@ -792,8 +842,11 @@ body main#tasks-page section#tasks-list td.progress > div::after {
   border-radius: 8px;
   transition: all 0.2s ease;
 }
-body main#orders-page section {
+body main#orders-page section, body main#quotes-page section, body main#transactions-page section {
   width: calc(100% - 50px);
+}
+body main#transactions-page section table tbody tr td:last-child {
+  gap: 4px;
 }
 body footer {
   margin-left: 240px;

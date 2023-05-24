@@ -26,11 +26,18 @@ $m-transition: all .4s;
     --panel-blue: #007bff;
 }
 
-[data-color="red"] { filter: var(--panel-red-f) !important }
-[data-color="yellow"] { filter: var(--panel-yellow-f) !important }
-[data-color="green"] { filter: var(--panel-green-f) !important }
-[data-color="blue"] { filter: var(--panel-1-f) !important }
-[data-color="purple"] { filter: var(--panel-purple-f) !important }
+[data-color="white"] { color: var(--white) !important }
+[data-filter-color="white"] { filter: invert(1) !important }
+[data-color="red"] { color: var(--panel-red) !important }
+[data-filter-color="red"] { filter: var(--panel-red-f) !important }
+[data-color="yellow"] { color: var(--panel-yellow) !important }
+[data-filter-color="yellow"] { filter: var(--panel-yellow-f) !important }
+[data-color="green"] { color: var(--panel-green) !important }
+[data-filter-color="green"] { filter: var(--panel-green-f) !important }
+[data-color="blue"] { color: var(--panel-1) !important }
+[data-filter-color="blue"] { filter: var(--panel-1-f) !important }
+[data-color="purple"] { color: var(--panel-purple) !important }
+[data-filter-color="purple"] { filter: var(--panel-purple-f) !important }
 
 ::-webkit-scrollbar { background: var(--panel-3) }
 ::-webkit-scrollbar-thumb { border-color: var(--panel-3) }
@@ -40,6 +47,11 @@ body {
     min-height: calc(100% - 70px);
 
     .loader-container .page-loader { background: var(--panel-3) }
+
+    .generic-icon {
+        color: var(--black);
+        > i { font-size: 18px }
+    }
 
     header, menu {
         position: fixed;
@@ -139,6 +151,7 @@ body {
                             height: 40px;
                             border-radius: 50%;
                             background: var(--panel-6);
+                            color: var(--panel-green);
 
                             img { transform: scale(55%) translate(1px, -1px) }
                         }
@@ -172,8 +185,8 @@ body {
                         height: 7px;
                         background: var(--panel-red);
                         border-radius: 50%;
-                        top: 6px; // (30px - 18px) / 2
-                        right: 5px; // same - 1px
+                        top: 6px;
+                        right: 5px;
                         z-index: 2;
                         opacity: 0;
                     }
@@ -181,8 +194,7 @@ body {
                     .icon {
                         width: 18px;
                         height: 18px;
-
-                        img { filter: invert(1) }
+                        color: var(--white);
                     }
 
                     &.new-notification .status { opacity: 1 }
@@ -358,16 +370,15 @@ body {
                     color: var(--panel-4);
 
                     .icon {
-                        width: 30px;
-                        height: 30px;
+                        width: 31px;
+                        height: 31px;
                         border-radius: 100%;
                         background: var(--panel-4-2);
                         margin: 0 6px;
+                        font-size: 14px;
+                        color: var(--white);
 
-                        img {
-                            transform: scale(.55) translateY(-1px);
-                            filter: invert(1);
-                        }
+                        img { transform: scale(.55) translateY(-1px) }
                     }
 
                     > span {
@@ -507,8 +518,7 @@ body {
                 white-space: nowrap;
                 text-align: left;
 
-                button.btn-access {
-                    background: var(--panel-1);
+                button {
                     border-radius: 4px;
                     font-size: 15px;
                     color: var(--white);
@@ -518,7 +528,21 @@ body {
                     box-shadow: 0 0 10px -3px var(--panel-5);
                     opacity: 1;
                     transition: $s-transition;
+                    max-height: 30px;
 
+                    &.get-pdf {
+                        height: 30px;
+                        width: 30px;
+                        background: var(--panel-purple);
+
+                        img {
+                            width: 18px;
+                            height: 18px;
+                            transform: translateY(-5%);
+                        }
+                    }
+
+                    &.btn-access { background: var(--panel-1) }
                     &:hover, &:focus { opacity: 85% }
                 }
 
@@ -578,6 +602,8 @@ body {
                         .icon-box {
                             width: 60px;
                             height: 60px;
+                            font-size: 60px;
+                            overflow: visible;
                         }
                     }
                 }
@@ -673,15 +699,15 @@ body {
                                 box-shadow: 0 0 10px -3px var(--panel-5);
                                 opacity: 1;
                                 transition: $s-transition;
+                                gap: .4rem;
 
                                 img {
                                     width: 14px;
                                     height: 14px;
                                     object-fit: contain;
-                                    margin-right: .4rem;
-                                    filter: invert(1);
                                 }
 
+                                i { font-size: 12px }
                                 &:hover, &:focus { opacity: 85% }
                             }
                         }
@@ -698,7 +724,6 @@ body {
                                     img {
                                         width: 18px;
                                         height: 18px;
-                                        filter: invert(1);
                                     }
                                 }
 
@@ -855,7 +880,11 @@ body {
             }
         }
 
-        &#orders-page section { width: calc(100% - 50px) }
+        &#orders-page, &#quotes-page, &#transactions-page {
+            section { width: calc(100% - 50px) }
+        }
+
+        &#transactions-page section table tbody tr td:last-child { gap: 4px }
     }
 
     footer {
