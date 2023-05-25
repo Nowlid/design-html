@@ -337,6 +337,7 @@ body menu .user .avatar {
   height: 36px;
   border-radius: 20px;
   position: relative;
+  overflow: visible;
 }
 body menu .user .avatar img {
   border-radius: 100%;
@@ -904,6 +905,114 @@ body main#services-page .container .infos-card .content a:hover, body main#servi
 }
 body main#services-page .container .infos-card .content a:hover::after, body main#services-page .container .infos-card .content a:focus::after, body main#support-page .container .infos-card .content a:hover::after, body main#support-page .container .infos-card .content a:focus::after {
   background: var(--panel-blue);
+}
+body main#basket-page form {
+  width: calc(100% - 50px);
+}
+body main#basket-page form table {
+  border: none;
+  color: var(--panel-4);
+  border-collapse: collapse;
+  width: 100%;
+}
+body main#basket-page form table thead tr th, body main#basket-page form table thead tr td, body main#basket-page form table tbody tr th, body main#basket-page form table tbody tr td {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 15px;
+  white-space: nowrap;
+  text-align: left;
+}
+body main#basket-page form table thead tr th:first-child, body main#basket-page form table thead tr td:first-child, body main#basket-page form table tbody tr th:first-child, body main#basket-page form table tbody tr td:first-child {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 0;
+}
+body main#basket-page form table thead tr th[colspan="5"], body main#basket-page form table thead tr td[colspan="5"], body main#basket-page form table tbody tr th[colspan="5"], body main#basket-page form table tbody tr td[colspan="5"] {
+  font-weight: 700;
+}
+body main#basket-page form table thead tr th[colspan="5"], body main#basket-page form table thead tr th[colspan="5"] ~ td, body main#basket-page form table thead tr th:nth-child(5), body main#basket-page form table thead tr th:nth-child(6), body main#basket-page form table thead tr td[colspan="5"], body main#basket-page form table thead tr td[colspan="5"] ~ td, body main#basket-page form table thead tr td:nth-child(5), body main#basket-page form table thead tr td:nth-child(6), body main#basket-page form table tbody tr th[colspan="5"], body main#basket-page form table tbody tr th[colspan="5"] ~ td, body main#basket-page form table tbody tr th:nth-child(5), body main#basket-page form table tbody tr th:nth-child(6), body main#basket-page form table tbody tr td[colspan="5"], body main#basket-page form table tbody tr td[colspan="5"] ~ td, body main#basket-page form table tbody tr td:nth-child(5), body main#basket-page form table tbody tr td:nth-child(6) {
+  text-align: right;
+}
+body main#basket-page form table tbody tr td input, body main#basket-page form table tbody tr td select {
+  border: 1px solid transparent;
+  background: #2a3038;
+  border-radius: 2px;
+  padding: 7px 12px;
+  outline: 1px solid transparent;
+}
+body main#basket-page form table tbody tr td input:focus, body main#basket-page form table tbody tr td select:focus {
+  outline-color: var(--panel-green-1);
+}
+body main#basket-page form table tbody tr td input {
+  color: var(--white);
+  height: 22px;
+  line-height: 1;
+  width: 54px;
+}
+body main#basket-page form table tbody tr td input:focus {
+  color: #4b5564;
+}
+body main#basket-page form table tbody tr td select {
+  color: #4b5564;
+  height: 38px;
+  min-width: 200px;
+  width: 100%;
+}
+body main#basket-page form table tbody tr td select option {
+  width: 100%;
+  height: 100%;
+}
+body main#basket-page form table tbody tr td select option:checked {
+  color: var(--white);
+}
+body main#basket-page form table tbody tr td.icons {
+  gap: 0.5rem;
+}
+body main#basket-page form table tbody tr td.icons button {
+  width: 30px;
+  height: 24px;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 1;
+  text-align: center;
+  box-shadow: 0 0 10px -3px var(--panel-5);
+}
+body main#basket-page form table tbody tr td.icons button.delete {
+  background: var(--panel-red);
+}
+body main#basket-page form table tbody tr td.icons button.edit {
+  background: var(--panel-1);
+}
+body main#basket-page form table tbody tr td.icons button:hover, body main#basket-page form table tbody tr td.icons button:focus {
+  opacity: 75%;
+}
+body main#basket-page form table tbody tr td:not([colspan]) ~ td:nth-child(2) span:first-child::after {
+  content: " x - ";
+}
+body main#basket-page form table tbody tr:last-child td:last-child {
+  color: var(--panel-blue);
+}
+body main#basket-page form button[type=submit] {
+  background: var(--panel-1);
+  color: var(--white);
+  border-radius: 4px;
+  border: none;
+  opacity: 1;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.2s;
+  cursor: pointer;
+  box-shadow: 0 0 10px -3px var(--panel-5);
+  font-weight: 500;
+  padding: 6px 12px;
+  margin: 8px 8px 0;
+}
+body main#basket-page form button[type=submit]:hover, body main#basket-page form button[type=submit]:focus {
+  opacity: 80%;
 }
 body footer {
   margin-left: 240px;

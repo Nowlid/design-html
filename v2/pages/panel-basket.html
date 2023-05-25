@@ -267,6 +267,105 @@
         </section>
 
         <h1 class="title">Panier</h1>
+
+        <form class="panel-section-box column align-f-end" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nom du produit</th>
+                        <th>Données/Quantité</th>
+                        <th>Facturation</th>
+                        <th>Frais d'installation</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="icons row">
+                            <button type="button" class="col-center delete">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><span>13</span><span>Minecraft Starter</span></td>
+                        <td><input type="number" name="qt-0" value="14" min="0" max="20"></td>
+                        <td>
+                            <select name="select-items-0" id="select-items-0">
+                                <option value="monthly" selected>Mensuelle</option>
+                                <option value="quaterly">Trimestrielle</option>
+                                <option value="semi-annually">Semestrielle</option>
+                                <option value="annually">Annuelle</option>
+                            </select>
+                        </td>
+                        <td>Aucun</td>
+                        <td>5,00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="icons row">
+                            <button type="button" class="col-center delete">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                            <button type="button" class="col-center edit">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                        </td>
+                        <td><span>2</span><span>Web Starter</span></td>
+                        <td><input type="number" name="qt-1" value="2" min="0" max="20"></td>
+                        <td>
+                            <select name="select-items-1" id="select-items-1">
+                                <option value="monthly" selected>Mensuelle</option>
+                                <option value="quaterly">Trimestrielle</option>
+                                <option value="semi-annually">Semestrielle</option>
+                                <option value="annually">Annuelle</option>
+                            </select>
+                        </td>
+                        <td>Aucun</td>
+                        <td>10,00 €</td>
+                    </tr>
+                    <tr>
+                        <td class="icons row">
+                            <button type="button" class="col-center delete">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                        <td><span>2</span><span>Revendeur Web</span></td>
+                        <td><input type="number" name="qt-2" value="2" min="0" max="20"></td>
+                        <td>
+                            <select name="select-items-2" id="select-items-2">
+                                <option value="monthly" selected>Mensuelle</option>
+                                <option value="quaterly">Trimestrielle</option>
+                                <option value="semi-annually">Semestrielle</option>
+                                <option value="annually">Annuelle</option>
+                            </select>
+                        </td>
+                        <td>Aucun</td>
+                        <td>3,00 €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Sous total</td>
+                        <td>96,00 €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Réduction</td>
+                        <td>Aucun</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Frais d'installation</td>
+                        <td>Aucun</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">TVA</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Total</td>
+                        <td>115,20 €</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="submit">Check-out</button>
+        </f>
     </main>
 
     <footer class="row space-between">

@@ -323,6 +323,7 @@ body {
                 height: 36px;
                 border-radius: 20px;
                 position: relative;
+                overflow: visible;
 
                 img { border-radius: 100% }
 
@@ -947,6 +948,119 @@ body {
                 }
             }
         } }
+
+        &#basket-page form {
+            width: calc(100% - 50px);
+
+            table {
+                border: none;
+                color: var(--panel-4);
+                border-collapse: collapse;
+                width: 100%;
+
+                thead, tbody { tr { th, td {
+                    font-weight: 400;
+                    font-size: 14px;
+                    padding: 15px;
+                    white-space: nowrap;
+                    text-align: left;
+
+                    &:first-child {
+                        width: fit-content;
+                        padding: 15px 0;
+                    }
+
+                    &[colspan="5"] { font-weight: 700 }
+
+                    &[colspan="5"], &[colspan="5"] ~ td, &:nth-child(5), &:nth-child(6) {
+                        text-align: right;
+                    }
+                } } }
+
+                tbody tr {
+                    td {
+                        input, select {
+                            border: 1px solid transparent;
+                            background: #2a3038;
+                            border-radius: 2px;
+                            padding: 7px 12px;
+                            outline: 1px solid transparent;
+
+                            &:focus { outline-color: var(--panel-green-1) }
+                        }
+
+                        input {
+                            color: var(--white);
+                            height: 22px;
+                            line-height: 1;
+                            width: 54px;
+
+                            &:focus { color: #4b5564 }
+                        }
+
+                        select {
+                            color: #4b5564;
+                            height: 38px;
+                            min-width: 200px;
+                            width: 100%;
+
+                            option {
+                                width: 100%;
+                                height: 100%;
+
+                                &:checked { color: var(--white) }
+                            }
+                        }
+
+                        &.icons {
+                            gap: .5rem;
+
+                            button {
+                                width: 30px;
+                                height: 24px;
+                                color: var(--white);
+                                border: none;
+                                border-radius: 4px;
+                                outline: none;
+                                cursor: pointer;
+                                transition: $s-transition;
+                                opacity: 1;
+                                text-align: center;
+                                box-shadow: 0 0 10px -3px var(--panel-5);
+
+                                &.delete { background: var(--panel-red) }
+                                &.edit { background: var(--panel-1) }
+                                &:hover, &:focus { opacity: 75% }
+                            }
+                        }
+
+                        &:not([colspan]) ~ td:nth-child(2) span:first-child::after {
+                            content: ' x - ';
+                        }
+                    }
+
+                    &:last-child td:last-child { color: var(--panel-blue) }
+                }
+            }
+
+            button[type="submit"] {
+                background: var(--panel-1);
+                color: var(--white);
+                border-radius: 4px;
+                border: none;
+                opacity: 1;
+                outline: none;
+                font-size: 15px;
+                transition: $s-transition;
+                cursor: pointer;
+                box-shadow: 0 0 10px -3px var(--panel-5);
+                font-weight: 500;
+                padding: 6px 12px;
+                margin: 8px 8px 0;
+
+                &:hover, &:focus { opacity: 80% }
+            }
+        }
     }
 
     footer {

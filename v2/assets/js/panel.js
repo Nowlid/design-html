@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
 
     // Page specific rules
     switch (main.id.toLowerCase()) {
-        case "tasks":
+        case "tasks-page":
             main.querySelectorAll('#tasks-list > table > tbody > tr > td').forEach(e => (
                 e.classList.contains('progress') && (e.querySelector('span').innerHTML += ` (${
                     e.style.getPropertyValue('--size')
