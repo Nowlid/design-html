@@ -1061,6 +1061,77 @@ body {
                 &:hover, &:focus { opacity: 80% }
             }
         }
+
+        &#reviews-page .container {
+            gap: 24px;
+            width: 100%;
+
+            section#sort-filters {
+                width: calc(22.5% - 37px);
+                height: fit-content;
+                gap: 4px;
+                padding-bottom: 16px;
+
+                h3 {
+                    font-weight: 500;
+                    margin-bottom: 12px;
+                }
+
+                a {
+                    width: calc(100% - 40px);
+                    padding: 12px 20px;
+                    cursor: pointer;
+                    opacity: 1;
+                    transition: $s-transition;
+                    line-height: 1.5rem;
+
+                    &.selected {
+                        border-radius: 4px;
+                        border: 1px solid var(--panel-blue);
+                        color: var(--white) !important;
+                    }
+
+                    &:first-of-type, &:last-of-type {
+                        color: var(--panel-blue);
+                        text-decoration-color: transparent;
+
+                        &:hover, &:focus { text-decoration-color: initial }
+                    }
+
+                    &.row { text-decoration: none }
+                    &:hover, &:focus { opacity: 75% }
+                }
+            }
+
+            section#reviews {
+                width: calc(77.5% - 37px);
+                max-height: calc(var(--i) - 116px);
+                overflow: hidden auto;
+                gap: 8px;
+
+                .review-box {
+                    font-size: 15px;
+                    border-radius: 4px;
+                    width: calc(100% - 56px);
+
+                    > span {
+                        &.date {
+                            margin: 16px 0;
+                            font-size: 14px;
+                        }
+
+                        &:not(.date) { margin: 6px 0 12px }
+                    }
+
+                    .stars {
+                        gap: 1px;
+                        font-size: 16px;
+                    }
+                }
+
+                &::-webkit-scrollbar { border-radius: 6px }
+            }
+        }
     }
 
     footer {

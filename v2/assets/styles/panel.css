@@ -1014,6 +1014,72 @@ body main#basket-page form button[type=submit] {
 body main#basket-page form button[type=submit]:hover, body main#basket-page form button[type=submit]:focus {
   opacity: 80%;
 }
+body main#reviews-page .container {
+  gap: 24px;
+  width: 100%;
+}
+body main#reviews-page .container section#sort-filters {
+  width: calc(22.5% - 37px);
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 4px;
+  padding-bottom: 16px;
+}
+body main#reviews-page .container section#sort-filters h3 {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+body main#reviews-page .container section#sort-filters a {
+  width: calc(100% - 40px);
+  padding: 12px 20px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.2s;
+  line-height: 1.5rem;
+}
+body main#reviews-page .container section#sort-filters a.selected {
+  border-radius: 4px;
+  border: 1px solid var(--panel-blue);
+  color: var(--white) !important;
+}
+body main#reviews-page .container section#sort-filters a:first-of-type, body main#reviews-page .container section#sort-filters a:last-of-type {
+  color: var(--panel-blue);
+  text-decoration-color: transparent;
+}
+body main#reviews-page .container section#sort-filters a:first-of-type:hover, body main#reviews-page .container section#sort-filters a:first-of-type:focus, body main#reviews-page .container section#sort-filters a:last-of-type:hover, body main#reviews-page .container section#sort-filters a:last-of-type:focus {
+  text-decoration-color: initial;
+}
+body main#reviews-page .container section#sort-filters a.row {
+  text-decoration: none;
+}
+body main#reviews-page .container section#sort-filters a:hover, body main#reviews-page .container section#sort-filters a:focus {
+  opacity: 75%;
+}
+body main#reviews-page .container section#reviews {
+  width: calc(77.5% - 37px);
+  max-height: calc(var(--i) - 116px);
+  overflow: hidden auto;
+  gap: 8px;
+}
+body main#reviews-page .container section#reviews .review-box {
+  font-size: 15px;
+  border-radius: 4px;
+  width: calc(100% - 56px);
+}
+body main#reviews-page .container section#reviews .review-box > span.date {
+  margin: 16px 0;
+  font-size: 14px;
+}
+body main#reviews-page .container section#reviews .review-box > span:not(.date) {
+  margin: 6px 0 12px;
+}
+body main#reviews-page .container section#reviews .review-box .stars {
+  gap: 1px;
+  font-size: 16px;
+}
+body main#reviews-page .container section#reviews::-webkit-scrollbar {
+  border-radius: 6px;
+}
 body footer {
   margin-left: 240px;
   padding: 30px 28px;
