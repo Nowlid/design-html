@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Avis client</title>
+    <title>Store - Example</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -205,7 +205,7 @@
                     <span class="row align-center">Transactions</span>
                 </a>
             </li>
-            <li>
+            <li class="current expand">
                 <a class="row align-center" href="./panel-base.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-store" data-color="purple"></i>
@@ -221,7 +221,7 @@
                 </a>
 
                 <ul>
-                    <li><a href="./panel-store-example.html">Exemple</a></li>
+                    <li class="current"><a href="./panel-store-example.html">Exemple</a></li>
                     <li><a href="./panel-store-web.html">Web</a></li>
                 </ul>
             </li>
@@ -236,7 +236,7 @@
                     </span>
                 </a>
             </li>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-reviews.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-star"></i>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center" id="reviews-page">
+    <main role="main" class="column align-center example" id="store">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,103 +266,85 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Avis client</h1>
+        <h1 class="title">Exemple</h1>
 
-        <div class="container row wrap">
-            <section id="sort-filters" class="panel-section-box column">
-                <h3>Selectionnez</h3>
+        <section class="panel-section-box" id="container">
+            <h2>Exemple</h2>
 
-                <a href="#" class="selected">Tous les avis</a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#">Sans étoile</a>
-            </section>
+            <img src="../assets/images/Usonyx-WebHosting-banner.png" alt="banner" class="banner">
 
-            <section id="reviews" class="column">
-                <div class="review-box panel-section-box column">
-                    <i class="fa fa-quote-left" data-color="green"></i>
-                    <p>
-                        Avec le module "Avis client", vous pouvez envoyer des emails de rappel à
-                        vos nouveaux clients pour leur demander leur avis sur vos services.
-                    </p>
-                    <i class="fa fa-quote-right" data-color="green"></i>
-
-                    <span class="date">01/12/22</span>
-
-                    <b>User - Client depuis le 19/11/12</b>
-                    <span>Web starter</span>
-
-                    <div class="stars row align-center">
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
+            <div class="container row space-between wrap">
+                <div class="panel-section-box product-card primary">
+                    <div class="title">
+                        <h3>Produit d'exemple</h3>
+                        <p class="price">10,00 € / mois</p>
                     </div>
+
+                    <ul><li>Produit d'exemple</li></ul>
+
+                    <button class="row align-center" type="button">
+                        Ajouter au panier <i class="fa fa-arrow-right"></i>
+                    </button>
                 </div>
 
-                <div class="review-box panel-section-box column">
-                    <i class="fa fa-quote-left" data-color="green"></i>
-                    <p>Très bon service</p>
-                    <i class="fa fa-quote-right" data-color="green"></i>
-
-                    <span class="date">01/12/22</span>
-
-                    <b>User - Client depuis le 19/11/12</b>
-                    <span>Web starter</span>
-
-                    <div class="stars row align-center">
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
+                <div class="panel-section-box product-card">
+                    <div class="title">
+                        <h3>Minecraft Starter</h3>
+                        <p class="price">5,00 € / mois</p>
                     </div>
+
+                    <ul>
+                        <li>25 Go SSD</li>
+                        <li>5 Go RAM</li>
+                        <li>5 Bases de données</li>
+                        <li>5 Sauvegardes</li>
+                        <li>Sous-domaine personnalisé</li>
+                        <li>Panel performant</li>
+                        <li>Trafic illimité</li>
+                        <li>Anti DDoS Support disponible 24/7/365</li>
+                    </ul>
+
+                    <button class="row align-center" type="button">
+                        Ajouter au panier <i class="fa fa-arrow-right"></i>
+                    </button>
                 </div>
 
-                <div class="review-box panel-section-box column">
-                    <i class="fa fa-quote-left" data-color="green"></i>
-                    <p>Client depuis pas longtemps mais je suis pas deçu</p>
-                    <i class="fa fa-quote-right" data-color="green"></i>
-
-                    <span class="date">01/12/22</span>
-
-                    <b>User - Client depuis le 19/11/12</b>
-                    <span>Web starter</span>
-
-                    <div class="stars row align-center">
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
+                <div class="panel-section-box product-card">
+                    <div class="title">
+                        <h3>Revendeur Web</h3>
+                        <p class="price">10,00 € / mois</p>
                     </div>
+
+                    <ul>
+                        <li>50 Go SSD</li>
+                        <li>Domaines illimités</li>
+                        <li>Comptes e-mail illimités</li>
+                        <li>Comptes FTP illimités</li>
+                        <li>Sous-domaines illimités</li>
+                        <li>Bases de données illimitées</li>
+                        <li>Trafic illimité Anti DDoS</li>
+                        <li>Support disponible 24/7/365</li>
+                    </ul>
+
+                    <button class="row align-center" type="button">
+                        Ajouter au panier <i class="fa fa-arrow-right"></i>
+                    </button>
                 </div>
-            </section>
-        </div>
+
+                <div class="panel-section-box product-card primary">
+                    <div class="title">
+                        <h3>Sur demande</h3>
+                        <p class="price">1,00 € / mois</p>
+                    </div>
+
+                    <ul><li>Sur demande</li></ul>
+
+                    <button class="row align-center" type="button">
+                        Offre sur demande <i class="fa fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="row space-between">

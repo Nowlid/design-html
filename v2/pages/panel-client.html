@@ -221,8 +221,8 @@
                 </a>
 
                 <ul>
-                    <li><a href="#">Exemple</a></li>
-                    <li><a href="#">Web</a></li>
+                    <li><a href="./panel-store-example.html">Exemple</a></li>
+                    <li><a href="./panel-store-web.html">Web</a></li>
                 </ul>
             </li>
             <li>
@@ -335,7 +335,11 @@
                                 <td>Web starter</td>
                                 <td><span class="badge success">225 Jours</span></td>
                                 <td><span class="badge unsuccess">Hors ligne</span></td>
-                                <td><button class="btn-access" type="button">Accéder</button></td>
+                                <td>
+                                    <button class="btn-access" type="button" id="tmp-service">
+                                        Accéder
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -360,7 +364,11 @@
                                 <td>3,00 €</td>
                                 <td>01/12/22 22:22:34</td>
                                 <td><span class="badge success">Complétée</span></td>
-                                <td><button class="btn-access" type="button">Accéder</button></td>
+                                <td>
+                                    <button class="btn-access" type="button" id="tmp-transaction">
+                                        Accéder
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -385,9 +393,13 @@
                                 <td>1</td>
                                 <td>3,00 €</td>
                                 <td>01/12/22 22:22:34</td>
-                                <td><span class="badge in-process">En cours</span></td>
+                                <td><span class="badge success">En cours</span></td>
                                 <td>Wallet</td>
-                                <td><button class="btn-access" type="button">Accéder</button></td>
+                                <td>
+                                    <button class="btn-access" type="button" id="tmp-command">
+                                        Accéder
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -491,9 +503,11 @@
             <h2>Nos produits épinglés</h2>
 
             <div class="container row space-between wrap">
-                <div class="product-card panel-section-box col-center">
-                    <h3>Web Starter</h3>
-                    <p class="price">3,00 € / mois</p>
+                <div class="panel-section-box product-card">
+                    <div class="title">
+                        <h3>Web Starter</h3>
+                        <p class="price">3,00 € / mois</p>
+                    </div>
 
                     <ul>
                         <li>25 Go SSD</li>
@@ -506,14 +520,16 @@
                         <li>Anti DDoS Support disponible 24/7/365</li>
                     </ul>
 
-                    <button type="button">
-                        Ajouter au panier
+                    <button class="row align-center" type="button">
+                        Ajouter au panier <i class="fa fa-arrow-right"></i>
                     </button>
                 </div>
 
-                <div class="product-card panel-section-box col-center">
-                    <h3>Web Starter</h3>
-                    <p class="price">5,00 € / mois</p>
+                <div class="panel-section-box product-card">
+                    <div class="title">
+                        <h3>Web Starter</h3>
+                        <p class="price">5,00 € / mois</p>
+                    </div>
 
                     <ul>
                         <li>25 GO SSD</li>
@@ -526,14 +542,16 @@
                         <li>Anti DDOS Support disponible 24/7/365</li>
                     </ul>
 
-                    <button type="button">
-                        Ajouter au panier
+                    <button class="row align-center" type="button">
+                        Ajouter au panier <i class="fa fa-arrow-right"></i>
                     </button>
                 </div>
 
-                <div class="product-card panel-section-box col-center">
-                    <h3>Web Starter</h3>
-                    <p class="price">10,00 € / mois</p>
+                <div class="panel-section-box product-card">
+                    <div class="title">
+                        <h3>Web Starter</h3>
+                        <p class="price">10,00 € / mois</p>
+                    </div>
 
                     <ul>
                         <li>50 GO SSD</li>
@@ -546,8 +564,8 @@
                         <li>Support disponible 24/7/365</li>
                     </ul>
 
-                    <button type="button">
-                        Ajouter au panier
+                    <button class="row align-center" type="button">
+                        Ajouter au panier <i class="fa fa-arrow-right"></i>
                     </button>
                 </div>
             </div>

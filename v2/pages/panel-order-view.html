@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Avis client</title>
+    <title>Suivi de la commande n°1</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -173,7 +173,7 @@
                     <span class="row align-center">Tâches</span>
                 </a>
             </li>
-            <li>
+            <li class="current">
                 <a class="row align-center" href="./panel-orders.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-box"></i>
@@ -236,7 +236,7 @@
                     </span>
                 </a>
             </li>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-reviews.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-star"></i>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center" id="reviews-page">
+    <main role="main" class="column align-center" id="order-view">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,103 +266,40 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Avis client</h1>
+        <h1 class="title">Suivi de la commande N°1</h1>
 
-        <div class="container row wrap">
-            <section id="sort-filters" class="panel-section-box column">
-                <h3>Selectionnez</h3>
+        <section class="panel-section-box">
+            <h2 class="row align-center">
+                <i class="fa fa-cube"></i> Résumé de la commande
+                <div class="badge success">Complétée</div>
+            </h2>
 
-                <a href="#" class="selected">Tous les avis</a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#" class="row">
-                    <i class="fa fa-star" data-color="yellow"></i>
-                </a>
-                <a href="#">Sans étoile</a>
-            </section>
-
-            <section id="reviews" class="column">
-                <div class="review-box panel-section-box column">
-                    <i class="fa fa-quote-left" data-color="green"></i>
-                    <p>
-                        Avec le module "Avis client", vous pouvez envoyer des emails de rappel à
-                        vos nouveaux clients pour leur demander leur avis sur vos services.
-                    </p>
-                    <i class="fa fa-quote-right" data-color="green"></i>
-
-                    <span class="date">01/12/22</span>
-
-                    <b>User - Client depuis le 19/11/12</b>
-                    <span>Web starter</span>
-
-                    <div class="stars row align-center">
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                    </div>
-                </div>
-
-                <div class="review-box panel-section-box column">
-                    <i class="fa fa-quote-left" data-color="green"></i>
-                    <p>Très bon service</p>
-                    <i class="fa fa-quote-right" data-color="green"></i>
-
-                    <span class="date">01/12/22</span>
-
-                    <b>User - Client depuis le 19/11/12</b>
-                    <span>Web starter</span>
-
-                    <div class="stars row align-center">
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                    </div>
-                </div>
-
-                <div class="review-box panel-section-box column">
-                    <i class="fa fa-quote-left" data-color="green"></i>
-                    <p>Client depuis pas longtemps mais je suis pas deçu</p>
-                    <i class="fa fa-quote-right" data-color="green"></i>
-
-                    <span class="date">01/12/22</span>
-
-                    <b>User - Client depuis le 19/11/12</b>
-                    <span>Web starter</span>
-
-                    <div class="stars row align-center">
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                        <i class="fa fa-star" data-color="yellow"></i>
-                    </div>
-                </div>
-            </section>
-        </div>
+            <div class="table-container col-center">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nom du produit</th>
+                            <th>Quantité</th>
+                            <th>Livraison</th>
+                            <th>Prix</th>
+                            <th>Frais de d'installation</th>
+                            <th>Prix unitaire</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Web Starter</td>
+                            <td>1</td>
+                            <td>Effectuée</td>
+                            <td>3,00 €</td>
+                            <td>Aucun</td>
+                            <td>3,00 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <footer class="row space-between">
