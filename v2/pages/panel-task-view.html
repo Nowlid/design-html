@@ -231,7 +231,7 @@
                         <i class="fa fa-shopping-basket"></i>
                     </div>
 
-                    <span class="row align-center">
+                    <span class="row align-center"> 
                         Panier <span class="badge col-center">17</span>
                     </span>
                 </a>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center" id="tasks-page">
+    <main role="main" class="column align-center" id="tasks-view">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,39 +266,50 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Tâches</h1>
+        <h1 class="title">Tâche</h1>
 
-        <section id="ping" class="panel-section-box">
-            <p>Tout les systèmes sont opérationnels. <small>Il y a 1 seconde</small></p>
-        </section>
+        <div class="container row wrap">
+            <section class="panel-section-box" id="task-details">
+                <p>Détails</p>
 
-        <section id="tasks-list" class="panel-section-box table-container">
-            <table class="table-panel-style">
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Catégorie</th>
-                        <th>Serveur</th>
-                        <th>État</th>
-                        <th>Date & Heure</th>
-                        <th>Progression</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="./panel-task-view.html" class="important">Maintenance en cours</a></td>
-                        <td><span class="badge important">Maintenance</span></td>
-                        <td>Plesk 01</td>
-                        <td><span class="badge success">Closed</span></td>
-                        <td>28/11/22 23:46</td>
-                        <td class="column progress">
-                            <span>Progression</span>
-                            <span class="progress-bar" style="--i:75%;--j:'75%'"></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                <div class="content column">
+                    <p><b>Date</b> il y a 5 mois - il y a 2 mois</p>
+                    <p><b>Catégorie</b><span class="badge important">Maintenance</span></p>
+                    <p><b>État</b><span class="badge success">Closed</span></p>
+                    <p><span class="progress-bar" style="--i:75%;--j:'75%'"></span></p>
+                </div>
+            </section>
+
+            <section class="panel-section-box" id="task-comments">
+                <h2 class="important">Maintenance en cours</h2>
+
+                <div class="comments-box column">
+                    <div class="comment">
+                        <h4 class="row space-between">
+                            <span>Commentaire 3</span><span class="date">il y a 5 mois</span>
+                        </h4>
+                        <p>Maintenance terminée</p>
+                    </div>
+
+                    <div class="comment">
+                        <h4 class="row space-between">
+                            <span>Commentaire 2</span><span class="date">il y a 5 mois</span>
+                        </h4>
+                        <p>L'installation se passe bien nous allons pouvoir terminer à temps</p>
+                    </div>
+
+                    <div class="comment">
+                        <h4 class="row space-between">
+                            <span>Commentaire 1</span><span class="date">il y a 5 mois</span>
+                        </h4>
+                        <p>
+                            Nous modifions des disques. Une maintenance est donc en cours. Pas plus
+                            d'informations
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="row space-between">

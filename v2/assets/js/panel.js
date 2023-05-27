@@ -70,14 +70,6 @@ window.addEventListener('load', () => {
 
     // Page specific rules
     switch (main.id.toLowerCase().slice(0, -5)) {
-        case "tasks":
-            main.querySelectorAll('#tasks-list > table > tbody > tr > td').forEach(e => (
-                e.classList.contains('progress') && (e.querySelector('span').innerHTML += ` (${
-                    e.style.getPropertyValue('--size')
-                })`)
-            ));
-            break;
-
         case "reviews":
             const resizeContainer = () => document.getElementById('reviews').style.setProperty('--i',
                 main.style.getPropertyValue('min-height')

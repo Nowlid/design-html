@@ -560,7 +560,13 @@ body main table.table-panel-style tbody tr td button.btn-access, body main table
 body main table.table-panel-style tbody tr td button:hover, body main table.table-panel-style tbody tr td button:focus, body main table.table-panel-style tbody tr th button:hover, body main table.table-panel-style tbody tr th button:focus, body main table.table-panel-style thead tr td button:hover, body main table.table-panel-style thead tr td button:focus, body main table.table-panel-style thead tr th button:hover, body main table.table-panel-style thead tr th button:focus {
   opacity: 85%;
 }
-body main table.table-panel-style tbody tr td .badge, body main table.table-panel-style tbody tr th .badge, body main table.table-panel-style thead tr td .badge, body main table.table-panel-style thead tr th .badge {
+body main table.table-panel-style tbody tr td:is(th), body main table.table-panel-style tbody tr th:is(th), body main table.table-panel-style thead tr td:is(th), body main table.table-panel-style thead tr th:is(th) {
+  border-top-width: 0;
+}
+body main table.table-panel-style thead.center-text tr td {
+  text-align: center;
+}
+body main .badge {
   font-size: 12px;
   color: var(--white);
   padding: 8px 11px;
@@ -569,27 +575,21 @@ body main table.table-panel-style tbody tr td .badge, body main table.table-pane
   width: -moz-fit-content;
   width: fit-content;
 }
-body main table.table-panel-style tbody tr td .badge.important, body main table.table-panel-style tbody tr th .badge.important, body main table.table-panel-style thead tr td .badge.important, body main table.table-panel-style thead tr th .badge.important {
+body main .badge.important {
   background: var(--panel-purple);
 }
-body main table.table-panel-style tbody tr td .badge.in-process, body main table.table-panel-style tbody tr th .badge.in-process, body main table.table-panel-style thead tr td .badge.in-process, body main table.table-panel-style thead tr th .badge.in-process {
+body main .badge.in-process {
   background: var(--panel-yellow);
 }
-body main table.table-panel-style tbody tr td .badge.success, body main table.table-panel-style tbody tr th .badge.success, body main table.table-panel-style thead tr td .badge.success, body main table.table-panel-style thead tr th .badge.success {
+body main .badge.success {
   background: var(--panel-green);
 }
-body main table.table-panel-style tbody tr td .badge.unsuccess, body main table.table-panel-style tbody tr th .badge.unsuccess, body main table.table-panel-style thead tr td .badge.unsuccess, body main table.table-panel-style thead tr th .badge.unsuccess {
+body main .badge.unsuccess {
   background: var(--panel-red);
 }
-body main table.table-panel-style tbody tr td .badge.blank, body main table.table-panel-style tbody tr th .badge.blank, body main table.table-panel-style thead tr td .badge.blank, body main table.table-panel-style thead tr th .badge.blank {
+body main .badge.blank {
   color: var(--black);
   background: var(--white);
-}
-body main table.table-panel-style tbody tr td:is(th), body main table.table-panel-style tbody tr th:is(th), body main table.table-panel-style thead tr td:is(th), body main table.table-panel-style thead tr th:is(th) {
-  border-top-width: 0;
-}
-body main table.table-panel-style thead.center-text tr td {
-  text-align: center;
 }
 body main .panel-section-box {
   padding: 28px 25px;
@@ -660,6 +660,38 @@ body main .panel-section-box.product-card.primary button {
 body main .panel-section-box.product-card.primary button:hover, body main .panel-section-box.product-card.primary button:focus {
   color: var(--white);
   background: var(--panel-1);
+}
+body main .progress-bar {
+  display: block;
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  background: var(--white);
+  border-radius: 0.5rem;
+}
+body main .progress-bar::before {
+  content: "";
+  display: block;
+  width: var(--i);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--panel-purple);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+body main .progress-bar::after {
+  content: var(--j);
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  transform: scale(0.9);
 }
 body main#client-page > section {
   width: 100%;
@@ -844,10 +876,10 @@ body main#tasks-page section#ping p {
 body main#tasks-page section#ping p small {
   font-size: 75%;
 }
-body main#tasks-page section#tasks-list th {
+body main#tasks-page section#tasks-list table tr th {
   text-align: initial;
 }
-body main#tasks-page section#tasks-list td a {
+body main#tasks-page section#tasks-list table tr td a {
   color: var(--panel-blue);
   -webkit-text-decoration: underline solid transparent 1px;
           text-decoration: underline solid transparent 1px;
@@ -855,35 +887,16 @@ body main#tasks-page section#tasks-list td a {
   cursor: pointer;
   opacity: 1;
 }
-body main#tasks-page section#tasks-list td a:hover, body main#tasks-page section#tasks-list td a:focus {
+body main#tasks-page section#tasks-list table tr td a:hover, body main#tasks-page section#tasks-list table tr td a:focus {
   text-decoration-color: initial;
   opacity: 70%;
 }
-body main#tasks-page section#tasks-list td a.important::before {
+body main#tasks-page section#tasks-list table tr td a.important::before {
   content: "[IMPORTANT] ";
 }
-body main#tasks-page section#tasks-list td.progress {
+body main#tasks-page section#tasks-list table tr td.progress {
   gap: 8px;
   padding: 11px 15px;
-}
-body main#tasks-page section#tasks-list td.progress > div {
-  width: 100%;
-  height: 1rem;
-  position: relative;
-  background: var(--white);
-  border-radius: 8px;
-}
-body main#tasks-page section#tasks-list td.progress > div::after {
-  content: "";
-  display: block;
-  width: var(--size);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--panel-purple);
-  border-radius: 8px;
-  transition: all 0.2s ease;
 }
 body main#orders-page section, body main#quotes-page section, body main#transactions-page section {
   width: calc(100% - 50px);
@@ -1134,6 +1147,60 @@ body main#store section#container img.banner {
 body main#store section#container .container {
   width: calc(100% - 50px);
   gap: 24px;
+}
+body main#tasks-view .container {
+  width: 100%;
+  gap: 24px;
+}
+body main#tasks-view .container section#task-details {
+  width: calc(33.33% - 62px);
+}
+body main#tasks-view .container section#task-details > p {
+  margin-bottom: 16px;
+}
+body main#tasks-view .container section#task-details .content {
+  padding: 0 16px;
+  gap: 24px;
+}
+body main#tasks-view .container section#task-details .content p {
+  font-size: 14px;
+}
+body main#tasks-view .container section#task-details .content p b::after {
+  content: " : ";
+}
+body main#tasks-view .container section#task-comments {
+  width: calc(66.66% - 62px);
+}
+body main#tasks-view .container section#task-comments h2 {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+body main#tasks-view .container section#task-comments h2.important::before {
+  content: "[IMPORTANT] ";
+}
+body main#tasks-view .container section#task-comments .comments-box {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+body main#tasks-view .container section#task-comments .comments-box .comment {
+  padding: 12px 20px;
+  color: #495057;
+}
+body main#tasks-view .container section#task-comments .comments-box .comment h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+body main#tasks-view .container section#task-comments .comments-box .comment h4 span.date {
+  font-size: 12px;
+}
+body main#tasks-view .container section#task-comments .comments-box .comment p {
+  font-size: 14px;
+}
+body main#tasks-view .container section#task-comments .comments-box .comment:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 body footer {
   margin-left: 240px;
