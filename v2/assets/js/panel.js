@@ -10,7 +10,11 @@ window.addEventListener('load', () => {
     // Expand or not menu
     header.querySelector('button.carret').addEventListener('click', () => {
         document.body.classList[menuState ? 'add' : 'remove']('expand-menu');
-        menu.querySelectorAll('nav > li').forEach(e => e.classList.remove('expand'));
+        menu.querySelectorAll('nav > li').forEach(e => (e.classList[(
+            menuState
+                && e.classList.contains('current')
+                && e.children[1] instanceof HTMLUListElement
+        ) ? 'add' : 'remove']('expand')));
         menuState = !menuState;
     });
 
@@ -18,7 +22,9 @@ window.addEventListener('load', () => {
     nav.querySelectorAll('li > ul').forEach(a => {
         a.parentElement.querySelector('a').addEventListener('click', b => {
             b.preventDefault();
-            menuState || a.parentElement.classList.toggle('expand');
+            a.parentElement.classList.contains('current')
+                || menuState
+                || a.parentElement.classList.toggle('expand');
             b.currentTarget.blur();
         });
     });

@@ -453,8 +453,12 @@ body menu nav > li ul li a {
   color: inherit;
   transition: all 0.2s;
   cursor: pointer;
+  opacity: 1;
 }
 body menu nav > li ul li a:hover, body menu nav > li ul li a:focus {
+  color: var(--white);
+}
+body menu nav > li ul li.current {
   color: var(--white);
 }
 body menu nav > li.current > a {
@@ -473,6 +477,12 @@ body menu nav > li.expand > a > span span.carret {
 }
 body menu nav > li.expand ul {
   display: flex;
+}
+body menu nav > li.expand.current > a > span span.carret img {
+  filter: invert(1);
+}
+body menu nav > li.expand.current ul a:hover, body menu nav > li.expand.current ul a:focus {
+  opacity: 85%;
 }
 body main {
   margin: 70px 0 0 240px;
@@ -585,6 +595,71 @@ body main .panel-section-box {
   padding: 28px 25px;
   border-radius: 4px;
   background: var(--panel-3);
+}
+body main .panel-section-box.product-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--panel-green);
+  width: calc(33.33% - 72px);
+  min-width: 200px;
+  gap: 8px;
+}
+body main .panel-section-box.product-card .title h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+body main .panel-section-box.product-card .title p.price {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+body main .panel-section-box.product-card ul {
+  width: calc(100% - 40px);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+body main .panel-section-box.product-card ul li {
+  margin-bottom: 16px;
+}
+body main .panel-section-box.product-card ul li::marker {
+  content: "- ";
+}
+body main .panel-section-box.product-card ul :first-child:is(:last-child) {
+  text-align: center;
+  list-style: none;
+}
+body main .panel-section-box.product-card ul :first-child:is(:last-child)::marker {
+  content: "";
+}
+body main .panel-section-box.product-card button {
+  background: transparent;
+  border: 1px solid var(--panel-green);
+  border-radius: 4px;
+  color: var(--panel-green);
+  padding: 16px 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  text-align: center;
+  gap: 6px;
+}
+body main .panel-section-box.product-card button:hover, body main .panel-section-box.product-card button:focus {
+  color: var(--white);
+  background: var(--panel-green);
+}
+body main .panel-section-box.product-card.primary {
+  border-color: var(--panel-1);
+}
+body main .panel-section-box.product-card.primary button {
+  border-color: var(--panel-1);
+  color: var(--panel-1);
+}
+body main .panel-section-box.product-card.primary button:hover, body main .panel-section-box.product-card.primary button:focus {
+  color: var(--white);
+  background: var(--panel-1);
 }
 body main#client-page > section {
   width: 100%;
@@ -753,45 +828,6 @@ body main#client-page section#pinned-products h2 {
 }
 body main#client-page section#pinned-products .container {
   width: 100%;
-}
-body main#client-page section#pinned-products .container .product-card {
-  border: 1px solid var(--panel-green);
-  width: calc(33.33% - 72px);
-}
-body main#client-page section#pinned-products .container .product-card h3 {
-  margin-bottom: 8px;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-body main#client-page section#pinned-products .container .product-card p.price {
-  font-size: 18px;
-  margin-bottom: 24px;
-}
-body main#client-page section#pinned-products .container .product-card ul {
-  margin-bottom: 16px;
-}
-body main#client-page section#pinned-products .container .product-card ul li {
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-body main#client-page section#pinned-products .container .product-card ul li::marker {
-  content: "- ";
-}
-body main#client-page section#pinned-products .container .product-card button {
-  background: transparent;
-  border: 1px solid var(--panel-green);
-  border-radius: 4px;
-  color: var(--panel-green);
-  padding: 16px 30px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-size: 14px;
-  text-align: center;
-}
-body main#client-page section#pinned-products .container .product-card button:hover, body main#client-page section#pinned-products .container .product-card button:focus {
-  color: var(--white);
-  background: var(--panel-green);
 }
 body main#tasks-page > section {
   width: calc(100% - 48px);
@@ -1079,6 +1115,25 @@ body main#reviews-page .container section#reviews .review-box .stars {
 }
 body main#reviews-page .container section#reviews::-webkit-scrollbar {
   border-radius: 6px;
+}
+body main#store section#container {
+  width: calc(100% - 48px);
+}
+body main#store section#container h2 {
+  text-align: center;
+  font-weight: 500;
+}
+body main#store section#container img.banner {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  margin: 8px 0;
+}
+body main#store section#container .container {
+  width: calc(100% - 50px);
+  gap: 24px;
 }
 body footer {
   margin-left: 240px;
