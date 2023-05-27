@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Suivi de la commande n°1</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/styles/sheet.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/panel.css">
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/panel.js"></script>
+    <script src="../assets/js/fontawesome.js"></script>
+
+</head>
+<body class="expand-menu">
+
+    <div class="loader-container">
+        <div class="page-loader col-center">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div>
+
+    <header class="row align-center space-between">
+        <button class="carret"><span></span></button>
+
+        <div class="sidebar row-center">
+            <div class="mailbox row-center">
+                <button class="row-center new-notification" type="button">
+                    <span class="status"></span>
+                    <div class="icon icon-box-center generic-icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                </button>
+
+                <div class="dropdown">
+                    <p>Vos emails reçus</p>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+
+                        <p class="column">
+                            Nouvelle connexion
+                            <span>Nous avons détecté une nouv...</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="user-box row-center">
+                <button class="user row-center" type="button">
+                    <div class="avatar icon-box-center">
+                        <img src="../assets/images/logo.webp" alt="avatar">
+                    </div>
+
+                    <span>Bonjour, User User</span>
+                </button>
+
+                <div class="dropdown">
+                    <p class="status">Connecté depuis le 19/05 à 18:43</p>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-user" data-color="green"></i>
+                        </div>
+
+                        <span>Vos informations</span>
+                    </a>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-envelope" data-color="blue"></i>
+                        </div>
+
+                        <span>Vos emails reçus</span>
+                    </a>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-chart-line" data-color="purple"></i>
+                        </div>
+
+                        <span>Historique d'activité</span>
+                    </a>
+                    <a class="row align-center" href="#">
+                        <div class="icon-box icon-box-center generic-icon">
+                            <i class="fa fa-sign-out" data-color="red"></i>
+                        </div>
+
+                        <span>Déconnexion</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <menu class="column">
+        <h1 class="row align-center">Nowlid <span>Panel</span></h1>
+
+        <div class="user row align-center">
+            <div class="avatar icon-box-center">
+                <img src="../assets/images/logo.webp" alt="avatar">
+                <span class="status d-block"></span>
+            </div>
+
+            <div class="name column">
+                User User <span>Client</span>
+            </div>
+        </div>
+
+        <nav>
+            <li>
+                <a class="row align-center" href="./panel-client.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-tachometer-alt" data-color="green"></i>
+                    </div>
+                    <span class="row align-center">Espace client</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-tasks.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <span class="row align-center">Tâches</span>
+                </a>
+            </li>
+            <li class="current">
+                <a class="row align-center" href="./panel-orders.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-box"></i>
+                    </div>
+                    <span class="row align-center">Commandes</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-quotes.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-file"></i>
+                    </div>
+                    <span class="row align-center">Devis</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-services.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-cubes"></i>
+                    </div>
+                    <span class="row align-center">Services</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-transactions.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-file-invoice"></i>
+                    </div>
+                    <span class="row align-center">Transactions</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-base.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-store" data-color="purple"></i>
+                    </div>
+
+                    <span class="row align-center space-between">
+                        Boutique
+
+                        <span class="carret col-center">
+                            <img src="../assets/images/arrow.png" alt="shop">
+                        </span>
+                    </span>
+                </a>
+
+                <ul>
+                    <li><a href="./panel-store-example.html">Exemple</a></li>
+                    <li><a href="./panel-store-web.html">Web</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-basket.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-shopping-basket"></i>
+                    </div>
+
+                    <span class="row align-center">
+                        Panier <span class="badge col-center">17</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-reviews.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <span class="row align-center">Avis client</span>
+                </a>
+            </li>
+            <li>
+                <a class="row align-center" href="./panel-support.html">
+                    <div class="icon icon-box-center">
+                        <i class="fa fa-life-ring"></i>
+                    </div>
+                    <span class="row align-center">Support technique</span>
+                </a>
+            </li>
+        </nav>
+    </menu>
+
+    <main role="main" class="column align-center" id="order-view">
+        <section id="ad-banner">
+            <div class="content">
+                <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
+                Nam nisi labore, vitae distinctio ad vel accusamus suscipit cumque fugiat sapiente
+                <b>possimus</b>, repellat omnis! Quos necessitatibus nihil enim saepe ab.
+            </div>
+
+            <div class="fix"></div>
+        </section>
+
+        <h1 class="title">Suivi de la commande N°1</h1>
+
+        <section class="panel-section-box">
+            <h2 class="row align-center">
+                <i class="fa fa-cube"></i> Résumé de la commande
+                <div class="badge success">Complétée</div>
+            </h2>
+
+            <div class="table-container col-center">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nom du produit</th>
+                            <th>Quantité</th>
+                            <th>Livraison</th>
+                            <th>Prix</th>
+                            <th>Frais de d'installation</th>
+                            <th>Prix unitaire</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Web Starter</td>
+                            <td>1</td>
+                            <td>Effectuée</td>
+                            <td>3,00 €</td>
+                            <td>Aucun</td>
+                            <td>3,00 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="row space-between">
+        <span class="copyright">Copyright &copy; Ezequiel Dev (lol le copyright)</span>
+        <span class="version">1.0.0</span>
+    </footer>
+
+</body>
+</html>

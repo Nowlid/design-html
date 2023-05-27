@@ -502,8 +502,9 @@ body main section#ad-banner .content {
   left: 0px;
   width: calc(100% - 24px);
   height: auto;
-  padding: 0 12px;
+  padding: 4px 12px;
   font-size: 14px;
+  line-height: 1rem;
   border-bottom: 16px solid var(--panel-3);
 }
 body main section#ad-banner .fix {
@@ -1201,6 +1202,47 @@ body main#tasks-view .container section#task-comments .comments-box .comment p {
 }
 body main#tasks-view .container section#task-comments .comments-box .comment:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+body main#order-view section {
+  width: 100%;
+  padding: 0;
+}
+body main#order-view section h2 {
+  font-weight: 500;
+  gap: 6px;
+  padding: 12px 20px;
+}
+body main#order-view section .table-container {
+  width: calc(100% - 50px);
+  padding: 28px 25px;
+}
+body main#order-view section .table-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+body main#order-view section .table-container table thead tr, body main#order-view section .table-container table tbody tr {
+  cursor: pointer;
+}
+body main#order-view section .table-container table thead tr th, body main#order-view section .table-container table thead tr td, body main#order-view section .table-container table tbody tr th, body main#order-view section .table-container table tbody tr td {
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--panel-4);
+}
+body main#order-view section .table-container table thead tr th:nth-child(3), body main#order-view section .table-container table thead tr th:nth-child(4), body main#order-view section .table-container table thead tr th:nth-child(5), body main#order-view section .table-container table thead tr td:nth-child(3), body main#order-view section .table-container table thead tr td:nth-child(4), body main#order-view section .table-container table thead tr td:nth-child(5), body main#order-view section .table-container table tbody tr th:nth-child(3), body main#order-view section .table-container table tbody tr th:nth-child(4), body main#order-view section .table-container table tbody tr th:nth-child(5), body main#order-view section .table-container table tbody tr td:nth-child(3), body main#order-view section .table-container table tbody tr td:nth-child(4), body main#order-view section .table-container table tbody tr td:nth-child(5) {
+  text-align: center;
+}
+body main#order-view section .table-container table thead tr th:last-child, body main#order-view section .table-container table thead tr td:last-child, body main#order-view section .table-container table tbody tr th:last-child, body main#order-view section .table-container table tbody tr td:last-child {
+  text-align: right;
+}
+body main#order-view section .table-container table thead tr:hover th, body main#order-view section .table-container table thead tr:hover td, body main#order-view section .table-container table tbody tr:hover th, body main#order-view section .table-container table tbody tr:hover td {
+  background: var(--black);
+  color: #212529;
+}
+body main#order-view section .table-container table thead tr {
+  background: var(--black);
+  border-top: 1px solid var(--panel-7);
+  border-bottom: 1px solid var(--panel-7);
 }
 body footer {
   margin-left: 240px;

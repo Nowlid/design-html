@@ -70,6 +70,26 @@ window.addEventListener('load', () => {
 
     // Page specific rules
     switch (main.id.toLowerCase().slice(0, -5)) {
+        case "client":
+            document.getElementById('tmp-service').addEventListener('click', () => (
+                window.location.replace('.')
+            ));
+            document.getElementById('tmp-transaction').addEventListener('click', () => (
+                window.location.replace('.')
+            ));
+            document.getElementById('tmp-command').addEventListener('click', () => (
+                window.location.replace('./panel-order-view.html')
+            ));
+            break;
+
+        case "orders":
+            document.querySelectorAll('main > section table tbody > tr').forEach(
+                e => e.querySelector('button').addEventListener('click', () => (
+                    window.location.replace('./panel-order-view.html')
+                ))
+            );
+            break;
+
         case "reviews":
             const resizeContainer = () => document.getElementById('reviews').style.setProperty('--i',
                 main.style.getPropertyValue('min-height')
