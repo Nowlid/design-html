@@ -514,52 +514,81 @@ body {
             margin-bottom: 12px;
         }
 
-        table.table-panel-style {
-            border: none;
-            color: var(--panel-4);
+        table.table-panel {
             border-collapse: collapse;
             width: 100%;
 
-            tbody, thead { tr { td, th {
+            thead, tbody { tr { td, th {
                 font-weight: 400;
                 font-size: 14px;
                 padding: 15px;
-                border: 1px solid var(--panel-7);
                 white-space: nowrap;
                 text-align: left;
-
-                button {
-                    border-radius: 4px;
-                    font-size: 15px;
-                    color: var(--white);
-                    padding: 6px 12px;
-                    border: none;
-                    cursor: pointer;
-                    box-shadow: 0 0 10px -3px var(--panel-5);
-                    opacity: 1;
-                    transition: $s-transition;
-                    max-height: 30px;
-
-                    &.get-pdf {
-                        height: 30px;
-                        width: 30px;
-                        background: var(--panel-purple);
-
-                        img {
-                            width: 18px;
-                            height: 18px;
-                            transform: translateY(-5%);
-                        }
-                    }
-
-                    &.btn-access { background: var(--panel-1) }
-                    &:hover, &:focus { opacity: 85% }
-                }
-
-                &:is(th) { border-top-width: 0 }
+                color: var(--panel-4);
             } } }
 
             thead.center-text tr td { text-align: center }
+
+            &.table-style-1 {
+                border: none;
+
+                thead, tbody { tr { th, td {
+                    border: 1px solid var(--panel-7);
+                    &:is(th) { border-top-width: 0 }
+
+                    button {
+                        border-radius: 4px;
+                        font-size: 15px;
+                        color: var(--white);
+                        padding: 6px 12px;
+                        border: none;
+                        cursor: pointer;
+                        box-shadow: 0 0 10px -3px var(--panel-5);
+                        opacity: 1;
+                        transition: $s-transition;
+                        max-height: 30px;
+
+                        &.get-pdf {
+                            height: 30px;
+                            width: 30px;
+                            background: var(--panel-purple);
+
+                            img {
+                                width: 18px;
+                                height: 18px;
+                                transform: translateY(-5%);
+                            }
+                        }
+
+                        &.btn-access { background: var(--panel-1) }
+                        &:hover, &:focus { opacity: 85% }
+                    }
+                } } }
+            }
+
+            &.table-style-2 {
+                thead, tbody { tr {
+                    cursor: pointer;
+
+                    th, td {
+                        &:nth-child(3), &:nth-child(4), &:nth-child(5) { text-align: center }
+                        &:last-child { text-align: right }
+                    }
+
+                    &:hover { th, td {
+                        background: var(--black);
+                        color: #212529;
+                    } }
+                } }
+
+                thead tr {
+                    th { font-weight: 700 }
+
+                    background: var(--black);
+                    border-top: 1px solid var(--panel-7);
+                    border-bottom: 1px solid var(--panel-7);
+                }
+            }
         }
 
         .badge {
@@ -1273,35 +1302,43 @@ body {
             .table-container {
                 width: calc(100% - 50px);
                 padding: 28px 25px;
+            }
+        }
+
+        &#transaction-view section {
+            width: calc(100% - 48px);
+            h2 { margin-bottom: 8px }
+
+            > p {
+                gap: .5rem;
+                margin-bottom: 1rem;
+            }
+
+            .informations {
+                margin: 8px 0;
+                padding-bottom: 16px;
+
+                > div {
+                    line-height: 20px;
+                    h4 { font-weight: 700 }
+                    b { font-weight: 600 }
+                    p { font-size: 14px }
+                    &.to { text-align: right }
+                }
+            }
+
+            .total-table {
+                justify-content: end;
+                width: 100%;
+                font-size: 15px;
+                margin-top: 20px;
 
                 table {
                     border-collapse: collapse;
-                    width: 100%;
+                    border: none;
+                    white-space: nowrap;
 
-                    thead, tbody { tr {
-                        cursor: pointer;
-
-                        th, td {
-                            padding: 15px;
-                            text-align: left;
-                            font-size: 14px;
-                            color: var(--panel-4);
-
-                            &:nth-child(3), &:nth-child(4), &:nth-child(5) { text-align: center }
-                            &:last-child { text-align: right }
-                        }
-
-                        &:hover { th, td {
-                            background: var(--black);
-                            color: #212529;
-                        } }
-                    } }
-
-                    thead tr {
-                        background: var(--black);
-                        border-top: 1px solid var(--panel-7);
-                        border-bottom: 1px solid var(--panel-7);
-                    }
+                    tr td { padding: 3px 8px }
                 }
             }
         }

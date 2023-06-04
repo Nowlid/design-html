@@ -519,21 +519,31 @@ body main h1.title {
   width: 100%;
   margin-bottom: 12px;
 }
-body main table.table-panel-style {
-  border: none;
-  color: var(--panel-4);
+body main table.table-panel {
   border-collapse: collapse;
   width: 100%;
 }
-body main table.table-panel-style tbody tr td, body main table.table-panel-style tbody tr th, body main table.table-panel-style thead tr td, body main table.table-panel-style thead tr th {
+body main table.table-panel thead tr td, body main table.table-panel thead tr th, body main table.table-panel tbody tr td, body main table.table-panel tbody tr th {
   font-weight: 400;
   font-size: 14px;
   padding: 15px;
-  border: 1px solid var(--panel-7);
   white-space: nowrap;
   text-align: left;
+  color: var(--panel-4);
 }
-body main table.table-panel-style tbody tr td button, body main table.table-panel-style tbody tr th button, body main table.table-panel-style thead tr td button, body main table.table-panel-style thead tr th button {
+body main table.table-panel thead.center-text tr td {
+  text-align: center;
+}
+body main table.table-panel.table-style-1 {
+  border: none;
+}
+body main table.table-panel.table-style-1 thead tr th, body main table.table-panel.table-style-1 thead tr td, body main table.table-panel.table-style-1 tbody tr th, body main table.table-panel.table-style-1 tbody tr td {
+  border: 1px solid var(--panel-7);
+}
+body main table.table-panel.table-style-1 thead tr th:is(th), body main table.table-panel.table-style-1 thead tr td:is(th), body main table.table-panel.table-style-1 tbody tr th:is(th), body main table.table-panel.table-style-1 tbody tr td:is(th) {
+  border-top-width: 0;
+}
+body main table.table-panel.table-style-1 thead tr th button, body main table.table-panel.table-style-1 thead tr td button, body main table.table-panel.table-style-1 tbody tr th button, body main table.table-panel.table-style-1 tbody tr td button {
   border-radius: 4px;
   font-size: 15px;
   color: var(--white);
@@ -545,27 +555,42 @@ body main table.table-panel-style tbody tr td button, body main table.table-pane
   transition: all 0.2s;
   max-height: 30px;
 }
-body main table.table-panel-style tbody tr td button.get-pdf, body main table.table-panel-style tbody tr th button.get-pdf, body main table.table-panel-style thead tr td button.get-pdf, body main table.table-panel-style thead tr th button.get-pdf {
+body main table.table-panel.table-style-1 thead tr th button.get-pdf, body main table.table-panel.table-style-1 thead tr td button.get-pdf, body main table.table-panel.table-style-1 tbody tr th button.get-pdf, body main table.table-panel.table-style-1 tbody tr td button.get-pdf {
   height: 30px;
   width: 30px;
   background: var(--panel-purple);
 }
-body main table.table-panel-style tbody tr td button.get-pdf img, body main table.table-panel-style tbody tr th button.get-pdf img, body main table.table-panel-style thead tr td button.get-pdf img, body main table.table-panel-style thead tr th button.get-pdf img {
+body main table.table-panel.table-style-1 thead tr th button.get-pdf img, body main table.table-panel.table-style-1 thead tr td button.get-pdf img, body main table.table-panel.table-style-1 tbody tr th button.get-pdf img, body main table.table-panel.table-style-1 tbody tr td button.get-pdf img {
   width: 18px;
   height: 18px;
   transform: translateY(-5%);
 }
-body main table.table-panel-style tbody tr td button.btn-access, body main table.table-panel-style tbody tr th button.btn-access, body main table.table-panel-style thead tr td button.btn-access, body main table.table-panel-style thead tr th button.btn-access {
+body main table.table-panel.table-style-1 thead tr th button.btn-access, body main table.table-panel.table-style-1 thead tr td button.btn-access, body main table.table-panel.table-style-1 tbody tr th button.btn-access, body main table.table-panel.table-style-1 tbody tr td button.btn-access {
   background: var(--panel-1);
 }
-body main table.table-panel-style tbody tr td button:hover, body main table.table-panel-style tbody tr td button:focus, body main table.table-panel-style tbody tr th button:hover, body main table.table-panel-style tbody tr th button:focus, body main table.table-panel-style thead tr td button:hover, body main table.table-panel-style thead tr td button:focus, body main table.table-panel-style thead tr th button:hover, body main table.table-panel-style thead tr th button:focus {
+body main table.table-panel.table-style-1 thead tr th button:hover, body main table.table-panel.table-style-1 thead tr th button:focus, body main table.table-panel.table-style-1 thead tr td button:hover, body main table.table-panel.table-style-1 thead tr td button:focus, body main table.table-panel.table-style-1 tbody tr th button:hover, body main table.table-panel.table-style-1 tbody tr th button:focus, body main table.table-panel.table-style-1 tbody tr td button:hover, body main table.table-panel.table-style-1 tbody tr td button:focus {
   opacity: 85%;
 }
-body main table.table-panel-style tbody tr td:is(th), body main table.table-panel-style tbody tr th:is(th), body main table.table-panel-style thead tr td:is(th), body main table.table-panel-style thead tr th:is(th) {
-  border-top-width: 0;
+body main table.table-panel.table-style-2 thead tr, body main table.table-panel.table-style-2 tbody tr {
+  cursor: pointer;
 }
-body main table.table-panel-style thead.center-text tr td {
+body main table.table-panel.table-style-2 thead tr th:nth-child(3), body main table.table-panel.table-style-2 thead tr th:nth-child(4), body main table.table-panel.table-style-2 thead tr th:nth-child(5), body main table.table-panel.table-style-2 thead tr td:nth-child(3), body main table.table-panel.table-style-2 thead tr td:nth-child(4), body main table.table-panel.table-style-2 thead tr td:nth-child(5), body main table.table-panel.table-style-2 tbody tr th:nth-child(3), body main table.table-panel.table-style-2 tbody tr th:nth-child(4), body main table.table-panel.table-style-2 tbody tr th:nth-child(5), body main table.table-panel.table-style-2 tbody tr td:nth-child(3), body main table.table-panel.table-style-2 tbody tr td:nth-child(4), body main table.table-panel.table-style-2 tbody tr td:nth-child(5) {
   text-align: center;
+}
+body main table.table-panel.table-style-2 thead tr th:last-child, body main table.table-panel.table-style-2 thead tr td:last-child, body main table.table-panel.table-style-2 tbody tr th:last-child, body main table.table-panel.table-style-2 tbody tr td:last-child {
+  text-align: right;
+}
+body main table.table-panel.table-style-2 thead tr:hover th, body main table.table-panel.table-style-2 thead tr:hover td, body main table.table-panel.table-style-2 tbody tr:hover th, body main table.table-panel.table-style-2 tbody tr:hover td {
+  background: var(--black);
+  color: #212529;
+}
+body main table.table-panel.table-style-2 thead tr {
+  background: var(--black);
+  border-top: 1px solid var(--panel-7);
+  border-bottom: 1px solid var(--panel-7);
+}
+body main table.table-panel.table-style-2 thead tr th {
+  font-weight: 700;
 }
 body main .badge {
   font-size: 12px;
@@ -1216,33 +1241,48 @@ body main#order-view section .table-container {
   width: calc(100% - 50px);
   padding: 28px 25px;
 }
-body main#order-view section .table-container table {
-  border-collapse: collapse;
-  width: 100%;
+body main#transaction-view section {
+  width: calc(100% - 48px);
 }
-body main#order-view section .table-container table thead tr, body main#order-view section .table-container table tbody tr {
-  cursor: pointer;
+body main#transaction-view section h2 {
+  margin-bottom: 8px;
 }
-body main#order-view section .table-container table thead tr th, body main#order-view section .table-container table thead tr td, body main#order-view section .table-container table tbody tr th, body main#order-view section .table-container table tbody tr td {
-  padding: 15px;
-  text-align: left;
+body main#transaction-view section > p {
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+body main#transaction-view section .informations {
+  margin: 8px 0;
+  padding-bottom: 16px;
+}
+body main#transaction-view section .informations > div {
+  line-height: 20px;
+}
+body main#transaction-view section .informations > div h4 {
+  font-weight: 700;
+}
+body main#transaction-view section .informations > div b {
+  font-weight: 600;
+}
+body main#transaction-view section .informations > div p {
   font-size: 14px;
-  color: var(--panel-4);
 }
-body main#order-view section .table-container table thead tr th:nth-child(3), body main#order-view section .table-container table thead tr th:nth-child(4), body main#order-view section .table-container table thead tr th:nth-child(5), body main#order-view section .table-container table thead tr td:nth-child(3), body main#order-view section .table-container table thead tr td:nth-child(4), body main#order-view section .table-container table thead tr td:nth-child(5), body main#order-view section .table-container table tbody tr th:nth-child(3), body main#order-view section .table-container table tbody tr th:nth-child(4), body main#order-view section .table-container table tbody tr th:nth-child(5), body main#order-view section .table-container table tbody tr td:nth-child(3), body main#order-view section .table-container table tbody tr td:nth-child(4), body main#order-view section .table-container table tbody tr td:nth-child(5) {
-  text-align: center;
-}
-body main#order-view section .table-container table thead tr th:last-child, body main#order-view section .table-container table thead tr td:last-child, body main#order-view section .table-container table tbody tr th:last-child, body main#order-view section .table-container table tbody tr td:last-child {
+body main#transaction-view section .informations > div.to {
   text-align: right;
 }
-body main#order-view section .table-container table thead tr:hover th, body main#order-view section .table-container table thead tr:hover td, body main#order-view section .table-container table tbody tr:hover th, body main#order-view section .table-container table tbody tr:hover td {
-  background: var(--black);
-  color: #212529;
+body main#transaction-view section .total-table {
+  justify-content: end;
+  width: 100%;
+  font-size: 15px;
+  margin-top: 20px;
 }
-body main#order-view section .table-container table thead tr {
-  background: var(--black);
-  border-top: 1px solid var(--panel-7);
-  border-bottom: 1px solid var(--panel-7);
+body main#transaction-view section .total-table table {
+  border-collapse: collapse;
+  border: none;
+  white-space: nowrap;
+}
+body main#transaction-view section .total-table table tr td {
+  padding: 3px 8px;
 }
 body footer {
   margin-left: 240px;
