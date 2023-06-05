@@ -725,6 +725,46 @@ body {
             }
         }
 
+        .input-box {
+            input, select, textarea {
+                border: none;
+                background: #2a3038;
+                border-radius: 2px;
+                padding: 7px 12px;
+                outline: 1px solid transparent;
+                color: #4b5564;
+                font-size: 14px;
+
+                &::placeholder { color: #4b5564 }
+                &:focus { outline-color: var(--panel-green-1) }
+                &:not(select):not(:focus) { color: var(--white) }
+            }
+
+            input {
+                height: 22px;
+                line-height: 1;
+            }
+
+            select {
+                height: 38px;
+                min-width: 200px;
+
+                option {
+                    width: 100%;
+                    height: 100%;
+
+                    &:checked { color: var(--white) }
+                }
+            }
+
+            textarea {
+                min-width: 200px;
+                min-height: 100px;
+                resize: vertical;
+                font-family: "Inter";
+            }
+        }
+
         &#client-page {
             > section {
                 width: 100%;
@@ -1058,38 +1098,8 @@ body {
 
                 tbody tr {
                     td {
-                        input, select {
-                            border: 1px solid transparent;
-                            background: #2a3038;
-                            border-radius: 2px;
-                            padding: 7px 12px;
-                            outline: 1px solid transparent;
-
-                            &:focus { outline-color: var(--panel-green-1) }
-                        }
-
-                        input {
-                            color: var(--white);
-                            height: 22px;
-                            line-height: 1;
-                            width: 54px;
-
-                            &:focus { color: #4b5564 }
-                        }
-
-                        select {
-                            color: #4b5564;
-                            height: 38px;
-                            min-width: 200px;
-                            width: 100%;
-
-                            option {
-                                width: 100%;
-                                height: 100%;
-
-                                &:checked { color: var(--white) }
-                            }
-                        }
+                        input { height: 22px }
+                        select { width: 100% }
 
                         &.icons {
                             gap: .5rem;
@@ -1342,6 +1352,8 @@ body {
                 }
             }
         }
+
+        // 
     }
 
     footer {

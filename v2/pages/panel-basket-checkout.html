@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Transaction #1</title>
+    <title>Votre commande</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -197,7 +197,7 @@
                     <span class="row align-center">Services</span>
                 </a>
             </li>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-transactions.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-file-invoice"></i>
@@ -225,7 +225,7 @@
                     <li><a href="./panel-store-web.html">Web</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="current">
                 <a class="row align-center" href="./panel-basket.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-shopping-basket"></i>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center" id="transaction-view">
+    <main role="main" class="column align-center" id="checkout-page">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,73 +266,140 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Transaction</h1>
+        <h1 class="title">Votre commande</h1>
 
-        <section class="panel-section-box">
-            <h2>Transaction</h2>
+        <div class="container row">
+            <div class="first-column column">
+                <section class="panel-section-box" id="recap">
+                    <h4>Votre commande</h4>
 
-            <p class="row align-center">
-                Transaction #1 <span class="badge success">Complétée</span>
-            </p>
+                    <p><span>14 x Minecraft Starter</span><span class="price">5,00 €</span></p>
+                    <p><span>3 x Revendeur Web</span><span class="price">10,00 €</span></p>
 
-            <div class="informations row wrap space-between">
-                <div class="from">
-                    <h4>Émise par</h4>
-                    <p>Ajoutez votre adresse ici</p>
-                    <p>13 rue de l'Hébergement</p>
-                    <p><b>75100 Paris</b></p>
-                    <p><b>SIRET : XXX</b></p>
-                    <br>
-                    <p><b>Type :</b> Wallet</p>
-                    <p><b>Nb. Objets :</b> 1</p>
-                </div>
+                    <p><span>Frais d'installation</span><b>Aucuns</b></p>
+                    <p><span>Sous total</span><b>100,00 €</b></p>
+                    <p><span>Réduction</span><b>Aucune</b></p>
+                    <p><span>TVA</span><b>20,00 €</b></p>
+                    <p><span>Total</span><b>120,00 €</b></p>
+                </section>
 
-                <div class="to">
-                    <h4>Pour</h4>
-                    <p><b>User User</b></p>
-                    <p>12 Rue Jean Jaures</p>
-                    <p>06 12 34 57 89</p>
-                    <p>contact@clientxcms.com</p>
-                    <br>
-                    <p><b>Date :</b></p>
-                    <p>2022/12/01</p>
-                </div>
+                <section id="coupon-code">
+                    <h3>Code promotionnel</h3>
+
+                    <div class="input-box row">
+                        <input type="text" placeholder="Code promotionnel">
+                        <button type="button"><i class="fa fa-plus"></i></button>
+                    </div>
+                </section>
             </div>
 
-            <table class="table-panel table-style-2">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nom du produit</th>
-                        <th>Quantité</th>
-                        <th>Livraison</th>
-                        <th>Prix</th>
-                        <th>Frais d'installation</th>
-                        <th>Prix unitaire</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="2">Web starter</td>
-                        <td>1</td>
-                        <td>Effectuée</td>
-                        <td>3,00 €</td>
-                        <td>Aucun</td>
-                        <td>3,00 €</td>
-                    </tr>
-                </tbody>
-            </table>
+            <form class="panel-section-box" id="form" method="post">
+                <p>Informations personnelles</p>
 
-            <div class="total-table row">
-                <table>
-                    <tr><td>Taxe</td><td>Aucune</td></tr>
-                    <tr><td>TVA</td><td>Aucune</td></tr>
-                    <tr><td>Réduction</td><td>Aucune</td></tr>
-                    <tr><td>Frais d'installation</td><td>Aucuns</td></tr>
-                    <tr><td>Total</td><td>3,00 €</td></tr>
-                </table>
-            </div>
-        </section>
+                <div class="main-crendentials row-center wrap">
+                    <div class="input-box column">
+                        <label for="first-name">Prénom</label>
+                        <input
+                            type="text"
+                            name="first-name"
+                            id="first-name"
+                            placeholder="Prénom"
+                            value="User"
+                            required
+                        />
+                    </div>
+                    <div class="input-box column">
+                        <label for="last-name">Nom de famille</label>
+                        <input
+                            type="text"
+                            name="last-name"
+                            id="last-name"
+                            placeholder="Nom de famille"
+                            value="User"
+                            required
+                        />
+                    </div>
+                    <div class="input-box column">
+                        <label for="email">Adresse E-Mail</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Adresse E-Mail"
+                            value="contact@nowlid.fr"
+                            required
+                        />
+                    </div>
+                    <div class="input-box column">
+                        <label for="tel">Numéro de téléphone</label>
+                        <input
+                            type="tel"
+                            name="tel"
+                            id="tel"
+                            placeholder="Numéro de téléphone"
+                            value="06 12 34 57 89"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <p>Adresse de facturation</p>
+
+                <div class="input-box column">
+                    <label class="optionnal" for="company-name">Nom de l'entreprise</label>
+                    <input type="text" name="company-name" id="company-name">
+                </div>
+
+                <div class="2-fields row space-between wrap">
+                    <div class="input-box column">
+                        <label for="adress-1">Adresse</label>
+                        <input type="text" name="adress-1" id="adress-1">
+                    </div>
+                    <div class="input-box column">
+                        <label for="adress-2">Complément d'adresse</label>
+                        <input type="text" name="adress-2" id="adress-2">
+                    </div>
+                </div>
+
+                <div class="3-fields row space-between wrap">
+                    <div class="input-box column">
+                        <label for="city">Ville</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div class="input-box column">
+                        <label for="state">État</label>
+                        <input type="text" name="state" id="state">
+                    </div>
+                    <div class="input-box column">
+                        <label for="postal-adress">Code postal</label>
+                        <input type="text" name="postal-adress" id="postal-adress">
+                    </div>
+                </div>
+
+                <div class="input-box column">
+                    <label for="country">Pays</label>
+
+                    <select name="country" id="country">
+                        <option value="de">Allemagne</option>
+                        <option value="be">Belgique</option>
+                        <option value="es">Espagne</option>
+                        <option value="fr" selected>France</option>
+                        <option value="it">Italie</option>
+                        <option value="lu">Luxembourg</option>
+                        <option value="ch">Suisse</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label for="comment" class="optional">Commentaire</label>
+                    <textarea
+                        name="comment"
+                        id="comment"
+                        placeholder="Commentaire sur votre commande"
+                    ></textarea>
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer class="row space-between">

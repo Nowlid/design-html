@@ -719,6 +719,48 @@ body main .progress-bar::after {
   color: #fff;
   transform: scale(0.9);
 }
+body main .input-box input, body main .input-box select, body main .input-box textarea {
+  border: none;
+  background: #2a3038;
+  border-radius: 2px;
+  padding: 7px 12px;
+  outline: 1px solid transparent;
+  color: #4b5564;
+  font-size: 14px;
+}
+body main .input-box input::-moz-placeholder, body main .input-box select::-moz-placeholder, body main .input-box textarea::-moz-placeholder {
+  color: #4b5564;
+}
+body main .input-box input::placeholder, body main .input-box select::placeholder, body main .input-box textarea::placeholder {
+  color: #4b5564;
+}
+body main .input-box input:focus, body main .input-box select:focus, body main .input-box textarea:focus {
+  outline-color: var(--panel-green-1);
+}
+body main .input-box input:not(select):not(:focus), body main .input-box select:not(select):not(:focus), body main .input-box textarea:not(select):not(:focus) {
+  color: var(--white);
+}
+body main .input-box input {
+  height: 22px;
+  line-height: 1;
+}
+body main .input-box select {
+  height: 38px;
+  min-width: 200px;
+}
+body main .input-box select option {
+  width: 100%;
+  height: 100%;
+}
+body main .input-box select option:checked {
+  color: var(--white);
+}
+body main .input-box textarea {
+  min-width: 200px;
+  min-height: 100px;
+  resize: vertical;
+  font-family: "Inter";
+}
 body main#client-page > section {
   width: 100%;
 }
@@ -1008,37 +1050,11 @@ body main#basket-page form table thead tr th[colspan="5"], body main#basket-page
 body main#basket-page form table thead tr th[colspan="5"], body main#basket-page form table thead tr th[colspan="5"] ~ td, body main#basket-page form table thead tr th:nth-child(5), body main#basket-page form table thead tr th:nth-child(6), body main#basket-page form table thead tr td[colspan="5"], body main#basket-page form table thead tr td[colspan="5"] ~ td, body main#basket-page form table thead tr td:nth-child(5), body main#basket-page form table thead tr td:nth-child(6), body main#basket-page form table tbody tr th[colspan="5"], body main#basket-page form table tbody tr th[colspan="5"] ~ td, body main#basket-page form table tbody tr th:nth-child(5), body main#basket-page form table tbody tr th:nth-child(6), body main#basket-page form table tbody tr td[colspan="5"], body main#basket-page form table tbody tr td[colspan="5"] ~ td, body main#basket-page form table tbody tr td:nth-child(5), body main#basket-page form table tbody tr td:nth-child(6) {
   text-align: right;
 }
-body main#basket-page form table tbody tr td input, body main#basket-page form table tbody tr td select {
-  border: 1px solid transparent;
-  background: #2a3038;
-  border-radius: 2px;
-  padding: 7px 12px;
-  outline: 1px solid transparent;
-}
-body main#basket-page form table tbody tr td input:focus, body main#basket-page form table tbody tr td select:focus {
-  outline-color: var(--panel-green-1);
-}
 body main#basket-page form table tbody tr td input {
-  color: var(--white);
   height: 22px;
-  line-height: 1;
-  width: 54px;
-}
-body main#basket-page form table tbody tr td input:focus {
-  color: #4b5564;
 }
 body main#basket-page form table tbody tr td select {
-  color: #4b5564;
-  height: 38px;
-  min-width: 200px;
   width: 100%;
-}
-body main#basket-page form table tbody tr td select option {
-  width: 100%;
-  height: 100%;
-}
-body main#basket-page form table tbody tr td select option:checked {
-  color: var(--white);
 }
 body main#basket-page form table tbody tr td.icons {
   gap: 0.5rem;
