@@ -610,6 +610,31 @@ body {
             }
         }
 
+        .primary-btn {
+            opacity: 1;
+            cursor: pointer;
+            position: relative;
+            transition: $s-transition;
+            border: none;
+            background: var(--panel-1);
+            color: var(--white);
+            outline: none;
+            border-radius: 4px;
+            font-size: 15px;
+            max-height: 30px;
+            white-space: nowrap;
+            box-shadow: 0 0 10px -3px var(--panel-5);
+            padding: 8px 12px;
+            gap: .4rem;
+            text-align: center;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+
+            &:hover, &:focus { opacity: .8 }
+        }
+
         .panel-section-box {
             padding: 28px 25px;
             border-radius: 4px;
@@ -759,8 +784,8 @@ body {
 
             textarea {
                 min-width: 200px;
-                min-height: 100px;
-                resize: vertical;
+                min-height: 150px;
+                resize: none;
                 font-family: "Inter";
             }
         }
@@ -1353,7 +1378,117 @@ body {
             }
         }
 
-        // 
+        &#checkout-page .container {
+            width: 100%;
+
+            .first-column {
+                width: calc(25% - 40px);
+
+                section#recap {
+                    width: calc(100% - 50px);
+                    margin-bottom: 24px;
+
+                    h4 {
+                        font-weight: 400;
+                        color: var(--panel-4);
+                        font-size: 18px;
+                        margin-bottom: 16px;
+                    }
+
+                    p {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 8px 0;
+                        font-size: 14px;
+                        white-space: normal;
+
+                        b { font-weight: 600 }
+                        span.price { color: var(--panel-4) }
+                        &:nth-last-child(5) { margin-top: 24px; }
+                    }
+                }
+
+                section#coupon-code {
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 400;
+                        margin-bottom: 8px;
+                    }
+
+                    .input-box {
+                        background: var(--panel-3);
+                        border-radius: 4px;
+                        padding: 8px;
+
+                        input {
+                            width: calc(100% - 54px);
+                            border-radius: 2px 0 0 2px;
+
+                            &:not(:focus) { outline-color: #2a3038 }
+                        }
+
+                        button {
+                            position: relative;
+                            width: 38px;
+                            height: 38px;
+                            border: none;
+                            outline: none;
+                            background: var(--panel-1);
+                            color: var(--white);
+                            font-size: 1rem;
+                            border-radius: 0 2px 2px 0;
+                            cursor: pointer;
+                            transition: $s-transition;
+                            opacity: 1;
+                            left: .5px;
+
+                            &:focus, &:hover { opacity: .8 }
+                        }
+                    }
+                }
+            }
+
+            > form {
+                width: calc(75% - 40px);
+
+                > p:first-child { margin-bottom: 10px }
+                > p:not(:first-child) { margin: 10px 0 }
+
+                .fields-2 {
+                    gap: 0 24px;
+                    > .input-box { width: calc(50% - 12px) }
+                }
+
+                .fields-3 {
+                    gap: 0 24px;
+                    > .input-box { width: calc(33.33% - 16px) }
+                }
+
+                .input-box {
+                    margin-bottom: 16px;
+
+                    label {
+                        font-size: 14px;
+                        margin-bottom: 8px;
+
+                        &.optional::after {
+                            content: '(optionel)';
+                            font-size: 12px;
+                            position: relative;
+                            bottom: 1px;
+                            left: 6px;
+                        }
+                    }
+
+                    textarea {
+                        width: calc(100% - 24px);
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
     }
 
     footer {

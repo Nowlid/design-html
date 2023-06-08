@@ -268,7 +268,7 @@
 
         <h1 class="title">Votre commande</h1>
 
-        <div class="container row">
+        <div class="container row space-between wrap">
             <div class="first-column column">
                 <section class="panel-section-box" id="recap">
                     <h4>Votre commande</h4>
@@ -286,7 +286,7 @@
                 <section id="coupon-code">
                     <h3>Code promotionnel</h3>
 
-                    <div class="input-box row">
+                    <div class="input-box row-center">
                         <input type="text" placeholder="Code promotionnel">
                         <button type="button"><i class="fa fa-plus"></i></button>
                     </div>
@@ -296,7 +296,7 @@
             <form class="panel-section-box" id="form" method="post">
                 <p>Informations personnelles</p>
 
-                <div class="main-crendentials row-center wrap">
+                <div class="main-crendentials fields-2 row-center wrap">
                     <div class="input-box column">
                         <label for="first-name">Prénom</label>
                         <input
@@ -346,33 +346,38 @@
                 <p>Adresse de facturation</p>
 
                 <div class="input-box column">
-                    <label class="optionnal" for="company-name">Nom de l'entreprise</label>
+                    <label class="optional" for="company-name">Nom de l'entreprise</label>
                     <input type="text" name="company-name" id="company-name">
                 </div>
 
-                <div class="2-fields row space-between wrap">
+                <div class="fields-2 row space-between wrap">
                     <div class="input-box column">
                         <label for="adress-1">Adresse</label>
-                        <input type="text" name="adress-1" id="adress-1">
+                        <input
+                            type="text"
+                            name="adress-1"
+                            id="adress-1"
+                            value="12 Rue Jean Jaures"
+                        >
                     </div>
                     <div class="input-box column">
-                        <label for="adress-2">Complément d'adresse</label>
+                        <label for="adress-2" class="optional">Complément d'adresse</label>
                         <input type="text" name="adress-2" id="adress-2">
                     </div>
                 </div>
 
-                <div class="3-fields row space-between wrap">
+                <div class="fields-3 row space-between wrap">
                     <div class="input-box column">
                         <label for="city">Ville</label>
-                        <input type="text" name="city" id="city">
+                        <input type="text" name="city" id="city" value="Paris">
                     </div>
                     <div class="input-box column">
                         <label for="state">État</label>
-                        <input type="text" name="state" id="state">
+                        <input type="text" name="state" id="state" value="Île-de-France">
                     </div>
                     <div class="input-box column">
                         <label for="postal-adress">Code postal</label>
-                        <input type="text" name="postal-adress" id="postal-adress">
+                        <input type="text" name="postal-adress" id="postal-adress" value="75100">
                     </div>
                 </div>
 
@@ -397,6 +402,10 @@
                         id="comment"
                         placeholder="Commentaire sur votre commande"
                     ></textarea>
+                </div>
+
+                <div class="submit-button column align-f-end">
+                    <button class="primary-btn" type="submit">Commander</button>
                 </div>
             </form>
         </div>
