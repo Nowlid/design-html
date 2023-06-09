@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Vos devis</title>
+    <title>Transaction #1</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -181,7 +181,7 @@
                     <span class="row align-center">Commandes</span>
                 </a>
             </li>
-            <li class="current">
+            <li>
                 <a class="row align-center" href="./panel-quotes.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-file"></i>
@@ -197,7 +197,7 @@
                     <span class="row align-center">Services</span>
                 </a>
             </li>
-            <li>
+            <li class="current">
                 <a class="row align-center" href="./panel-transactions.html">
                     <div class="icon icon-box-center">
                         <i class="fa fa-file-invoice"></i>
@@ -255,7 +255,7 @@
         </nav>
     </menu>
 
-    <main role="main" class="column align-center" id="quotes-page">
+    <main role="main" class="column align-center" id="transaction-view">
         <section id="ad-banner">
             <div class="content">
                 <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit.<br><br>
@@ -266,24 +266,72 @@
             <div class="fix"></div>
         </section>
 
-        <h1 class="title">Vos devis</h1>
+        <h1 class="title">Transaction</h1>
 
         <section class="panel-section-box">
-            <table class="table-panel table-style-1">
+            <h2>Transaction</h2>
+
+            <p class="row align-center">
+                Transaction #1 <span class="badge success">Complétée</span>
+            </p>
+
+            <div class="informations row wrap space-between">
+                <div class="from">
+                    <h4>Émise par</h4>
+                    <p>Ajoutez votre adresse ici</p>
+                    <p>13 rue de l'Hébergement</p>
+                    <p><b>75100 Paris</b></p>
+                    <p><b>SIRET : XXX</b></p>
+                    <br>
+                    <p><b>Type :</b> Wallet</p>
+                    <p><b>Nb. Objets :</b> 1</p>
+                </div>
+
+                <div class="to">
+                    <h4>Pour</h4>
+                    <p><b>User User</b></p>
+                    <p>12 Rue Jean Jaures</p>
+                    <p>06 12 34 57 89</p>
+                    <p>contact@clientxcms.com</p>
+                    <br>
+                    <p><b>Date :</b></p>
+                    <p>2022/12/01</p>
+                </div>
+            </div>
+
+            <table class="table-panel table-style-2">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Montants</th>
-                        <th>Date & Heure</th>
-                        <th>Actions</th>
+                        <th>Nom du produit</th>
+                        <th>Quantité</th>
+                        <th>Livraison</th>
+                        <th>Prix</th>
+                        <th>Frais d'installation</th>
+                        <th>Prix unitaire</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="4">Aucun enregistrement trouvé</td>
+                        <td colspan="2">Web starter</td>
+                        <td>1</td>
+                        <td>Effectuée</td>
+                        <td>3,00 €</td>
+                        <td>Aucun</td>
+                        <td>3,00 €</td>
                     </tr>
                 </tbody>
             </table>
+
+            <div class="total-table row">
+                <table>
+                    <tr><td>Taxe</td><td>Aucune</td></tr>
+                    <tr><td>TVA</td><td>Aucune</td></tr>
+                    <tr><td>Réduction</td><td>Aucune</td></tr>
+                    <tr><td>Frais d'installation</td><td>Aucuns</td></tr>
+                    <tr><td>Total</td><td>3,00 €</td></tr>
+                </table>
+            </div>
         </section>
     </main>
 
